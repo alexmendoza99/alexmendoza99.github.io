@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancify Shamcify</title>
+    <style>
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+    <script src="fancifymytext.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact</a>
+        <a href="fancifymytext.html">Fancify my Text</a>
+    </div>
+
+    <h1>Fancify my Text</h1>
+
+    <!-- Text FieldSet -->
+    <fieldset style="border: 5px solid; padding: 10px; width: 400px;">
+        <legend>Text</legend>
+        <textarea id="userText" rows="4" cols="30"></textarea>
+    </fieldset>
+
+    <!-- Fancify FieldSet -->
+    <fieldset style="border: 5px solid; padding: 10px; width: 400px;">
+        <legend>Fancify</legend>
+        <button id="biggerButton" onclick="biggerText()">Bigger!</button>
+        <br><br>
+        <input type="radio" id="fancyRadio" name="style" onchange="updateStyles()" value="fancy"> FancyShmancy<br>
+        <input type="radio" id="boringRadio" name="style" onchange="updateStyles()" value="boring"> BoringBetty<br><br>
+        <button id="mooButton" onclick="moo()">Moo</button>
+    </fieldset>
+</body>
+</html>
