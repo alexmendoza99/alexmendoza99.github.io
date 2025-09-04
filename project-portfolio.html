@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>This Portfolio — Case Study | Alex Mendoza</title>
+  <meta name="description" content="Case study for this portfolio: lightweight front-end, semantic HTML, modern CSS, and small JS/TypeScript for GitHub Pages."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <span class="logo" aria-hidden="true">AM</span>
+        <span class="brand-text">Alex Mendoza</span>
+      </a>
+      <nav aria-label="Breadcrumb">
+        <a href="./index.html#past-projects">← Past Projects</a>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a class="btn primary" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:42px 0 32px">
+    <section aria-labelledby="title">
+      <h1 id="title">This Portfolio — Lightweight, Accessible Front-end</h1>
+      <p class="subtitle">
+        A small, fast portfolio built to highlight my front-end skills: semantic HTML, modern CSS (variables, grid, responsive
+        scale), and a touch of JavaScript/TypeScript for interactions. Deployed to GitHub Pages with no framework overhead.
+      </p>
+
+      <div class="meta-grid">
+        <div class="card pad">
+          <strong>Role</strong>
+          <ul class="meta-list">
+            <li>Designer &amp; front-end developer</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <strong>Stack</strong>
+          <ul class="meta-list">
+            <li>HTML, modern CSS</li>
+            <li>JavaScript &amp; TypeScript</li>
+            <li>GitHub Pages (static hosting)</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <strong>Design system</strong>
+          <ul class="meta-list">
+            <li>CSS variables for color, radius, shadows</li>
+            <li>Grid &amp; utility classes for layout</li>
+            <li>Reusable cards, tags, chips</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <strong>Goals</strong>
+          <ul class="meta-list">
+            <li>Fast, accessible, readable</li>
+            <li>Mobile-first, responsive</li>
+            <li>Clear information hierarchy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="overview">
+      <h2 id="overview">Overview</h2>
+      <div class="grid-2">
+        <div class="card pad">
+          <h3 class="no-top">Why this approach</h3>
+          <p>
+            I wanted a site that loads instantly on GitHub Pages and is easy to maintain.
+            That means clean HTML, a small CSS design system, and tiny JS/TS helpers—no heavy frameworks or build steps required.
+          </p>
+        </div>
+        <div class="card pad">
+          <h3 class="no-top">What I focused on</h3>
+          <ul>
+            <li>Semantic markup and accessible navigation/breadcrumbs.</li>
+            <li>Consistent card components (radius, border, shadow, spacing).</li>
+            <li>Responsive grid for projects/sections with clear reading rhythm.</li>
+            <li>Utilities for tags, chips, pills, and meta info.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="implementation">
+      <h2 id="implementation">Implementation</h2>
+      <div class="card pad">
+        <ol class="tight">
+          <li>Defined color tokens, borders, and shadow in <code>:root</code> CSS variables.</li>
+          <li>Built a grid system and reusable “card” pattern for content.</li>
+          <li>Wrote small JS for clipboard, scroll, and minor UI behaviors (TypeScript friendly).</li>
+          <li>Optimized for mobile first; tested on narrow viewports and high-contrast settings.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="quality">
+      <h2 id="quality">Performance &amp; Accessibility</h2>
+      <div class="card pad">
+        <ul class="compact">
+          <li>No client frameworks; minimal JS.</li>
+          <li>Readable type scale and contrast; keyboard-friendly controls.</li>
+          <li>Light DOM and images; fast on GitHub Pages.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-brand">
+        <a class="brand" href="./index.html">
+          <span class="logo" aria-hidden="true">AM</span>
+          <span class="brand-text">Alexandrea Mendoza</span>
+        </a>
+        <small>© <span id="year"></span> Alexandrea Mendoza — Portfolio</small>
+      </div>
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="./index.html#past-projects">Past Projects</a>
+        <a href="./index.html#experience">Experience</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#contact">Contact</a>
+        <a class="btn ghost sm" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <div class="foot-social" aria-label="Contact and social">
+        <a href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

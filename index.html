@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alex Mendoza — Portfolio</title>
+  <title>Alexandrea Mendoza — Portfolio</title>
   <meta name="description" content="Software engineer and builder. Systems, APIs, data, and graphics." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <div class="container nav">
       <a class="brand" href="#home">
         <span class="logo" aria-hidden="true">AM</span>
-        <span class="brand-text">Alex Mendoza</span>
+        <span class="brand-text">Alexandrea Mendoza</span>
       </a>
       <nav aria-label="Primary">
         <a href="#past-projects">Past Projects</a>
@@ -24,8 +24,8 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="cta">
-        <a class="btn ghost" href="mailto:alexmendoza99@gmail.com" aria-label="Email Alex">Email</a>
-        <a class="btn primary" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn ghost" href="mailto:ammendo28@gmail.com" aria-label="Email Alex">Email</a>
+        <a class="btn primary" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </header>
@@ -58,25 +58,24 @@
     <section class="section" id="past-projects" aria-labelledby="projects-title">
       <h2 id="projects-title">Past Projects</h2>
       <p class="note">Examples across web, graphics, and GPU work.</p>
-      <div class="grid projects">
-        <!-- Project 1 -->
-        <article class="item card project" aria-labelledby="proj-s26-title">
-          <a class="stretched-link" href="project-studio26.html" aria-label="Read case study: Studio 26"></a>
 
-          <!-- thumbnail with image -->
-          <div class="thumb img-thumb" aria-label="Studio 26 storefront home page">
-            <img
-              src="assets/thestudio26homepage.png"
-              alt="Studio 26 storefront home page with featured classes and products"
-              loading="lazy" decoding="async">
-            <div class="thumb-chips">
-              <span>Storefront</span>
-              <span>React/Next.js • Node/Express</span>
+      <div class="grid projects">
+        <!-- Project 1 — The Studio 26 -->
+        <article class="item card project" aria-labelledby="proj-s26-title">
+          <a class="stretched-link" href="project-studio26.html" aria-label="Read case study: The Studio 26"></a>
+
+          <div class="thumb has-img">
+            <img src="assets/thestudio26homepage.png"
+                alt="The Studio 26 storefront showing featured classes and products"
+                loading="lazy" decoding="async">
+            <div class="thumb-chips bottom">
+              <span class="badge">Storefront</span>
+              <span class="badge">React/Next.js • Node/Express</span>
             </div>
           </div>
 
           <div class="meta">
-            <h3 id="proj-s26-title">Studio 26 — E-commerce and Class Booking</h3>
+            <h3 id="proj-s26-title">The Studio 26 — E-commerce and Class Booking</h3>
             <p>Unified bookings, products, Stripe, and ShipStation; managed the project and delivered admin workflows and customer management.</p>
             <div class="tags">
               <span>React</span><span>Next.js</span><span>TypeScript</span>
@@ -86,43 +85,75 @@
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="item card project" aria-labelledby="proj-jogl-title">
-          <a class="stretched-link" href="project-jogl.html" aria-label="Read case study: JOGL Engine"></a>
-          <div class="thumb" role="img" aria-label="OpenGL skybox and lighting">
-            <span>Graphics</span>
-            <span>JOGL/OpenGL</span>
+        <!-- Project 2 — Folsom Family Tree Counseling -->
+        <article class="item card project" aria-labelledby="proj-fftc-title">
+          <a class="stretched-link" href="project-fftc.html" aria-label="Read case study: Folsom Family Tree Counseling"></a>
+
+          <div class="thumb has-img">
+            <img src="assets/fftc-services.png"
+                alt="Folsom Family Tree Counseling homepage"
+                loading="lazy" decoding="async">
+            <div class="thumb-chips bottom">
+              <span class="badge">Site rebuild &amp; migration</span>
+              <span class="badge">SEO • Domain recovery</span>
+            </div>
           </div>
+
           <div class="meta">
-            <h3 id="proj-jogl-title">OpenGL/JOGL Engine — Skybox and Lighting</h3>
-            <p>Textured models, skybox, ambient lighting, and camera controls with a clean render loop and shader layout.</p>
-            <div class="tags"><span>Java</span><span>JOGL</span><span>GLSL</span></div>
+            <h3 id="proj-fftc-title">Folsom Family Tree Counseling — Site Migration &amp; SEO</h3>
+            <p>Recovered the owner’s domain, rebuilt the website on a new hosting platform, and modernized the UX to drive bookings. Streamlined messaging and set up keyword-driven local SEO for the Folsom area.</p>
+            <div class="tags">
+              <span>HTML/CSS</span><span>React</span><span>Node.js</span><span>Express</span>
+              <span>Migration</span><span>Domain</span><span>SEO</span><span>Analytics</span>
+            </div>
           </div>
         </article>
-        <!-- Project 3 -->
-        <article class="item card project" aria-labelledby="proj-cuda-title">
-          <a class="stretched-link" href="project-cuda.html" aria-label="Read case study: GPU Kernels"></a>
-          <div class="thumb" role="img" aria-label="CUDA basics">
-            <span>Parallel</span>
-            <span>CUDA</span>
+
+        <!-- Project 3 — This Portfolio -->
+        <article class="item card project" aria-labelledby="proj-portfolio-title">
+          <a class="stretched-link" href="project-portfolio.html" aria-label="Read case study: This Portfolio"></a>
+
+          <div class="thumb has-img">
+            <img src="assets/portfoliocard.jpg"
+                alt="Screenshot of this portfolio’s homepage"
+                loading="lazy" decoding="async">
+            <div class="thumb-chips bottom">
+              <span class="badge">Front-end</span>
+              <span class="badge">Accessible UI</span>
+            </div>
           </div>
+
           <div class="meta">
-            <h3 id="proj-cuda-title">GPU Kernels — Histogram, Scan, Reduction</h3>
-            <p>Practice kernels with attention to memory coalescing and occupancy; includes tests and simple benchmarks.</p>
-            <div class="tags"><span>CUDA</span><span>C++</span><span>Unit tests</span></div>
+            <h3 id="proj-portfolio-title">This Portfolio — Lightweight, Accessible UI</h3>
+            <p>Hand-built site showcasing my front-end design &amp; implementation: semantic HTML, modern CSS, and small progressive JS/TypeScript.</p>
+            <div class="tags">
+              <span>TypeScript</span><span>JavaScript</span><span>HTML/CSS</span>
+            </div>
           </div>
         </article>
-        <!-- Project 4 -->
-        <article class="item card project" aria-labelledby="proj-analytics-title">
-          <a class="stretched-link" href="project-analytics.html" aria-label="Read case study: Admin Analytics"></a>
-          <div class="thumb" role="img" aria-label="Dashboard and analytics">
-            <span>Data</span>
-            <span>Dashboard</span>
+
+        <!-- Project 4 — Graphics & OpenGL -->
+        <article class="item card project" aria-labelledby="proj-graphics-title">
+          <a class="stretched-link" href="project-graphics.html" aria-label="Read case study: Graphics & OpenGL"></a>
+
+          <div class="thumb has-img">
+            <img
+              src="assets/graphics-thumb.jpg"
+              alt="OpenGL scene with textured models, skybox, and lighting"
+              loading="lazy" decoding="async">
+            <div class="thumb-chips bottom">
+              <span class="badge">3D Modeling &amp; Animation</span>
+              <span class="badge">OpenGL/JOGL • GLSL</span>
+            </div>
           </div>
+
           <div class="meta">
-            <h3 id="proj-analytics-title">Admin Analytics — Customers and Orders</h3>
-            <p>Filterable cohorts and revenue insights to answer “what changed this month” in one view.</p>
-            <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Charts</span></div>
+            <h3 id="proj-graphics-title">Graphics &amp; OpenGL — Modeling, Lighting, Animation</h3>
+            <p>Custom JOGL engine with skybox, textured models, ambient/directional lighting, and camera controls. Shader pipeline work plus assets modeled in Maya/Blender.</p>
+            <div class="tags">
+              <span>OpenGL/JOGL</span><span>GLSL</span><span>Java</span>
+              <span>Maya</span><span>Blender</span><span>3D Modeling</span><span>Animation</span>
+            </div>
           </div>
         </article>
       </div>
@@ -131,27 +162,91 @@
     <!-- EXPERIENCE -->
     <section class="section" id="experience" aria-labelledby="experience-title">
       <h2 id="experience-title">Experience</h2>
+
       <div class="timeline">
+
+        <!-- The Studio 26 LLC -->
         <div class="tl card">
           <div>
-            <strong>Owner and Tutor</strong><br />
-            <small>2019 – Present</small>
+            <strong>Website Developer &amp; SEO Advisor — The Studio 26 LLC</strong><br />
+            <small>April 2023 – Present</small>
           </div>
           <div>
-            Support 10 to 20 students weekly in math and CS. Build individualized plans and track outcomes.
+            <ul class="points">
+              <li>Built a custom e-commerce &amp; class-booking platform with admin dashboards.</li>
+              <li>Integrated <strong>Stripe</strong> (Checkout/POS) and <strong>ShipStation</strong> webhooks for fulfillment.</li>
+              <li>Implemented rental equipment management and related admin workflows.</li>
+              <li>Modeled <strong>MongoDB</strong> collections, indexes, and validation; assisted initial data migration.</li>
+              <li>Delivered a customer management system (profiles with contact info, bookings, and online orders).</li>
+              <li>Built reusable page templates and a consistent component/theme system; contributed to UI/UX.</li>
+              <li>Implemented auth &amp; messaging: <strong>NextAuth</strong> (OAuth), admin auth/permissions, and email via <strong>Nodemailer</strong>/<strong>Gmail API</strong>.</li>
+              <li>Added <strong>JSON-LD structured data</strong> (schema.org) for classes/products/organization to improve SERP richness and LLM scraping.</li>
+              <li>Automated QA: <strong>Selenium WebDriver + Mocha</strong> end-to-end tests; <strong>Jest</strong> unit tests; scripted manual passes with logs.</li>
+              <li>Deployed on <strong>Vercel</strong>; asset storage/CDN via <strong>AWS S3</strong>; Lighthouse checks and analytics instrumentation.</li>
+            </ul>
           </div>
         </div>
+
+        <!-- Folsom Family Tree Counseling -->
         <div class="tl card">
           <div>
-            <strong>Software Projects — University and Freelance</strong><br />
-            <small>2021 – 2025</small>
+            <strong>Website Developer &amp; Digital Strategy — Folsom Family Tree Counseling</strong><br />
+            <small>December 2023 – Present</small>
           </div>
           <div>
-            Systems work, full stack apps, graphics assignments (JOGL), and data features across several projects.
+            <ul class="points">
+              <li>Recovered the client-owned <strong>domain/DNS</strong> and migrated the site to a modern host.</li>
+              <li>Rebuilt responsive templates; implemented targeted <strong>HTML/CSS</strong> injections and performance fixes.</li>
+              <li>Streamlined messaging: contact-form routing, anti-spam filtering, and a simple spreadsheet process to track inquiries.</li>
+              <li><strong>Wrote all website copy</strong> end-to-end; collaborated on voice/tone and iterated quickly per client feedback.</li>
+              <li>Brand refresh: vector <strong>logo redraw (SVG)</strong>, palette &amp; type scale, favicon and social/OG images.</li>
+              <li>Local SEO: keyword research for the Folsom area, on-page structure, <strong>Google Business Profile</strong>, citations, sitemap/robots.</li>
+              <li>Analytics &amp; monitoring: set up <strong>GA4</strong> and <strong>Search Console</strong>; watched index coverage and search queries.</li>
+            </ul>
           </div>
         </div>
+
+        <!-- Teaching Assistant & Grader -->
+        <div class="tl card">
+          <div>
+            <strong>Teaching Assistant &amp; Grader — Database Management, CSU Sacramento</strong><br />
+            <small>January 2024 – May 2024</small>
+          </div>
+          <div>
+            <ul class="points">
+               <li>Supported advanced SQL topics: query optimization, normalization (1NF–3NF), indexing strategies, joins, and ER modeling.</li>
+              <li>Led weekly review sessions and office hours; coached students on schema design and debugging SQL.</li>
+              <li>Developed sample datasets, ERD diagrams, and step-by-step practice problems used in labs and study guides.</li>
+              <li>Assisted with project design and grading; created clear rubrics and delivered actionable feedback with quick turnaround.</li>
+              <li>Maintained course discussion channels (Canvas/Piazza); triaged common issues and posted concise how-to notes.</li>
+              <li>Proctored quizzes/exams and upheld academic-integrity guidelines.</li>
+              <li>Stack: PostgreSQL/MySQL, ERD tools, VS Code/psql; basic shell and Git for starter code and submissions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Full-Stack Software Engineering Intern -->
+        <div class="tl card">
+          <div>
+            <strong>Full-Stack Software Engineering Intern — Spearwave</strong><br />
+            <small>June 2021 – September 2021</small>
+          </div>
+          <div>
+            <ul class="points">
+              <li>Implemented small features &amp; bug fixes across the web app using semantic HTML/CSS and vanilla JavaScript, working from tickets and code reviews.</li>
+              <li>Built and debugged REST API handlers in <strong>Python</strong>; wrote SQL queries and simple migrations to support new data fields.</li>
+              <li>Added unit tests and endpoint-level integration tests; created fixtures and data-seeding scripts to make tests reliable.</li>
+              <li>Triaged issues using logs and repro steps, wrote minimal repros, and verified fixes in staging prior to release.</li>
+              <li>Maintained basic CI checks (lint/test) to keep the main branch green and surfaced failures to the team.</li>
+              <li>Used Git/GitHub for PRs, reviews, and issue tracking; participated in daily stand-ups, sprint planning, and retrospectives.</li>
+              <li>Wrote lightweight developer docs (local setup, API examples, Postman collection) to improve onboarding and handoffs.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </section>
+
 
     <!-- SKILLS -->
     <section class="section" id="skills" aria-labelledby="skills-title">
@@ -197,7 +292,10 @@
     <section class="section" id="education" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
       <div class="card pad">
-        B.S. Computer Science — California State University, Sacramento
+        <ul class="meta-list">
+          <li><strong>B.S., Computer Science</strong> — California State University, Sacramento</li>
+          <li><strong>A.S., Physical Science &amp; Mathematics</strong> — American River College, Sacramento</li>
+        </ul>
       </div>
     </section>
 
@@ -209,27 +307,45 @@
           <h3 class="no-top">Let’s talk</h3>
           <p>If you are hiring for software engineer roles, I welcome a conversation. Code samples or a brief walkthrough available on request.</p>
           <div class="row">
-            <a class="btn primary" href="mailto:alexmendoza99@gmail.com">Email me</a>
-            <a class="btn" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">View resume</a>
+            <a class="btn primary" href="mailto:ammendo28@gmail.com">Email me</a>
+            <a class="btn" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">View resume</a>
           </div>
         </div>
         <div class="card">
           <h3 class="no-top">Links</h3>
           <ul class="links">
             <li><a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/ammendo28/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container foot-row">
-      <span>© <span id="year"></span> Alex Mendoza</span>
-      <span class="small">Built with vanilla HTML and CSS for fast GitHub Pages hosting.</span>
-    </div>
-  </footer>
+    <footer class="footer">
+      <div class="container foot">
+        <div class="foot-brand">
+          <a class="brand" href="./index.html">
+            <span class="logo" aria-hidden="true">AM</span>
+            <span class="brand-text">Alexandrea Mendoza</span>
+          </a>
+          <small>© <span id="year"></span> Alexandrea Mendoza — Portfolio</small>
+        </div>
+        <nav class="foot-links" aria-label="Footer navigation">
+          <a href="./index.html#past-projects">Past Projects</a>
+          <a href="./index.html#experience">Experience</a>
+          <a href="./index.html#skills">Skills</a>
+          <a href="./index.html#contact">Contact</a>
+          <a class="btn ghost sm" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </nav>
+        <div class="foot-social" aria-label="Contact and social">
+          <a href="mailto:alexmendoza99@gmail.com">Email</a>
+          <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#top" class="back-to-top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

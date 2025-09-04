@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Page: Graphics & OpenGL — Gallery
+    Author: Alex Mendoza
+    Purpose: Personal gallery of 3D modeling, animation, and OpenGL/JOGL experiments.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graphics & OpenGL — Gallery | Alex Mendoza</title>
+  <meta name="description" content="Personal gallery: 3D modeling, animation, and JOGL/OpenGL shader experiments. Maya/Blender assets, GLSL studies, and renders." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-scoped tweaks (optional: move to style.css later) -->
+  <style>
+    /* Responsive gallery grid */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:16px;
+    }
+    .gallery-item{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .gallery-media{
+      width:100%;
+      aspect-ratio: 16/9;
+      object-fit:cover;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:var(--panel);
+      display:block;
+    }
+    .gallery-item figcaption{
+      font-size:14px;
+      color:var(--muted);
+    }
+    /* Narrower hero to keep the page light */
+    .gallery-intro.card.pad{ padding:20px }
+  </style>
+</head>
+
+<body id="top">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <span class="logo" aria-hidden="true">AM</span>
+        <span class="brand-text">Alex Mendoza</span>
+      </a>
+      <nav aria-label="Breadcrumb">
+        <a href="./index.html#past-projects">← Past Projects</a>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a class="btn primary" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container" style="padding:42px 0 32px">
+    <!-- Intro -->
+    <section aria-labelledby="title">
+      <h1 id="title">Graphics &amp; OpenGL — Gallery</h1>
+      <div class="card pad gallery-intro">
+        <p class="no-top subtitle" style="margin:0">
+          A personal gallery of 3D work and OpenGL/JOGL experiments. My portfolio focuses on software engineering,
+          but I enjoy building models, writing small shaders, and exploring lighting/animation—it's a fun creative outlet
+          that informs how I think about tools and UX.
+        </p>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section" aria-labelledby="highlights-title">
+      <h2 id="highlights-title">Highlights</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/highlight-01.png" alt="OpenGL scene with skybox and textured model">
+          <figcaption>JOGL sandbox — skybox + textured hero model.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/highlight-02.png" alt="Studio render with area light and soft shadows">
+          <figcaption>Studio render — soft key light, simple material.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/highlight-03.png" alt="Viewport capture showing normals/wireframe debug">
+          <figcaption>Shader doodle — normals &amp; wireframe debug view.</figcaption>
+        </figure>
+      </div>
+      <p class="note" style="margin-top:8px">Tip: click a thumbnail to open full-size (links can point to originals if you want).</p>
+    </section>
+
+    <!-- Models / Renders -->
+    <section class="section" aria-labelledby="models-title">
+      <h2 id="models-title">Models &amp; Renders</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/model-01.png" alt="Hard-surface prop render">
+          <figcaption>Hard-surface prop — subdivision + bevel workflow.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/model-02.png" alt="Organic model turntable render">
+          <figcaption>Organic form — turntable render with simple SSS.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/model-03.png" alt="UV layout and texture maps preview">
+          <figcaption>UV layout &amp; maps — base color, roughness, normal.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Animations -->
+    <section class="section" aria-labelledby="anim-title">
+      <h2 id="anim-title">Animations</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item card pad">
+          <video class="gallery-media" controls preload="metadata" poster="assets/gallery/anim-01-poster.png">
+            <source src="assets/gallery/anim-01.mp4" type="video/mp4">
+          </video>
+          <figcaption>Looping orbit + camera dolly; exported as MP4 for web.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <video class="gallery-media" controls preload="metadata" poster="assets/gallery/anim-02-poster.png">
+            <source src="assets/gallery/anim-02.mp4" type="video/mp4">
+          </video>
+          <figcaption>Simple keyframe path — spin &amp; ease-in/out timing.</figcaption>
+        </figure>
+      </div>
+      <p class="note" style="margin-top:8px">Videos are compressed for fast loading; originals available on request.</p>
+    </section>
+
+    <!-- Shader Doodles -->
+    <section class="section" aria-labelledby="shader-title">
+      <h2 id="shader-title">Shader Doodles</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/shader-01.png" alt="Ambient and diffuse pass comparison">
+          <figcaption>GLSL — ambient/diffuse passes with simple materials.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/shader-02.png" alt="Normal mapping preview on panel surface">
+          <figcaption>Normal mapping on a beveled panel; tiled UVs.</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media" src="assets/gallery/shader-03.png" alt="Wireframe overlay used for debugging">
+          <figcaption>Wireframe overlay for mesh/debug checks.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Tools (kept lightweight; not a full case study) -->
+    <section class="section" aria-labelledby="tools-title">
+      <h2 id="tools-title">Tools</h2>
+      <div class="card pad">
+        <div class="skills">
+          <span class="chip">Maya</span>
+          <span class="chip">Blender</span>
+          <span class="chip">OpenGL/JOGL</span>
+          <span class="chip">GLSL</span>
+          <span class="chip">GIMP/Photoshop</span>
+        </div>
+        <p class="note" style="margin-top:8px">If you’d like a deeper technical breakdown (render loop, loaders, shader code), I’m happy to walk through it briefly.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-brand">
+        <a class="brand" href="./index.html">
+          <span class="logo" aria-hidden="true">AM</span>
+          <span class="brand-text">Alex Mendoza</span>
+        </a>
+        <small>© <span id="year"></span> Alex Mendoza — Portfolio</small>
+      </div>
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="./index.html#past-projects">Past Projects</a>
+        <a href="./index.html#experience">Experience</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#contact">Contact</a>
+        <a class="btn ghost sm" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <div class="foot-social" aria-label="Contact and social">
+        <a href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -208,3 +208,96 @@ h1{font-size:clamp(40px, 6vw, 56px); line-height:1.1; margin:10px 0}
 
 .meta-list{ margin:6px 0 0; padding-left:18px; }
 .meta-list li{ margin:2px 0; line-height:1.35; }
+
+/* Logo gallery */
+.logo-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+@media (max-width:900px){
+  .logo-grid{ grid-template-columns:1fr; }
+}
+
+/* Each logo card: image centered, caption pinned to bottom */
+.logo-card{
+  min-height:300px;                      /* gives some vertical room */
+  display:grid;
+  grid-template-rows: 1fr auto;          /* image area + caption area */
+  justify-items:center;                  /* center horizontally */
+  align-items:center;                    /* center items in their rows */
+  padding:16px;
+  gap:8px;
+}
+
+.logo-card img{
+  max-width:92%;
+  max-height:220px;                      /* keeps tall images from overflowing */
+  object-fit:contain;
+  display:block;                         /* removes baseline gap */
+}
+
+.logo-card figcaption{
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+  padding-top:4px;
+}
+
+.inline-actions { margin: 8px 0 6px; }
+
+/* Small button size variant */
+.btn.sm {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+/* Thumb with real image + overlay badges (matches Studio 26 style) */
+.projects .thumb.has-img{
+  position: relative;
+  height: 200px;           /* match Studio 26 card height */
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  background: #dfe9ff;
+}
+
+.projects .thumb.has-img img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* subtle top gradient so badges are readable */
+.projects .thumb.has-img::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.28), rgba(0,0,0,0) 45%);
+}
+
+/* badge row (top-left), like Studio 26 */
+.projects .thumb.has-img .badges{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  z-index: 1;
+}
+
+/* translucent grey bubble with white text */
+.badge{
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(17, 24, 39, .55);   /* translucent grey */
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: saturate(140%) blur(2px);
+}

@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body id="top">
   <!-- ======================= HEADER ======================= -->
   <header class="site-header">
     <div class="container nav">
@@ -46,12 +46,11 @@
     <!-- ===== HERO: title, intro, and meta cards ===== -->
     <section aria-labelledby="title">
       <h1 id="title">The Studio 26 — E-commerce and Class Booking</h1>
-        <p class="subtitle">
-            I served as <strong>project manager and developer</strong>, coordinating client and team meetings and delivering a unified platform
-            for bookings, products, payments, and shipping with an admin dashboard—built with <strong>React/Next.js</strong> on the frontend and
-            <strong>Node.js/Express</strong> services on the backend.
-        </p>
-
+      <p class="subtitle">
+        I served as <strong>project manager and developer</strong>, coordinating client and team meetings and delivering a unified platform
+        for bookings, products, payments, and shipping with an admin dashboard—built with <strong>React/Next.js</strong> on the frontend and
+        <strong>Node.js/Express</strong> services on the backend.
+      </p>
 
       <!-- Meta grid: four small summary cards -->
       <div class="meta-grid">
@@ -66,13 +65,13 @@
 
         <!-- Card: Tech stack -->
         <div class="card pad">
-            <strong>Stack</strong>
-            <ul class="meta-list">
-                <li><b>Frontend:</b> React, Next.js, TypeScript</li>
-                <li><b>Backend:</b> Node.js, Express</li>
-                <li><b>Database:</b> MongoDB</li>
-                <li><b>Payments/Shipping:</b> Stripe, ShipStation</li>
-            </ul>
+          <strong>Stack</strong>
+          <ul class="meta-list">
+            <li><b>Frontend:</b> React, Next.js, TypeScript</li>
+            <li><b>Backend:</b> Node.js, Express</li>
+            <li><b>Database:</b> MongoDB</li>
+            <li><b>Payments/Shipping:</b> Stripe, ShipStation</li>
+          </ul>
         </div>
 
         <!-- Card: APIs & external services used -->
@@ -85,6 +84,7 @@
             <li><b>Shipping:</b> ShipStation webhooks</li>
             <li><b>Storage/CDN:</b> AWS S3</li>
             <li><b>Deploy:</b> Vercel Pro</li>
+            <li><b>Structured data:</b> schema.org <b>JSON-LD</b> for LocalBusiness, Product/Class, and FAQ (LLM/search-friendly)</li>
           </ul>
         </div>
 
@@ -209,6 +209,7 @@
           <li>Created a <strong>Figma prototype</strong> to align on information architecture and visual direction.</li>
           <li>Modeled data for products, classes, rentals, and customers; added indexes for common queries.</li>
           <li>Implemented API routes and admin form flows; integrated Stripe and ShipStation webhooks.</li>
+          <li>Added <strong>schema.org JSON-LD</strong> for LocalBusiness, Product/Class, and FAQ to improve rich results and machine readability for search engines and LLMs.</li>
           <li>Staged deployments and content entry; prepared handoff documentation.</li>
         </ol>
       </div>
@@ -226,6 +227,7 @@
           <li><strong>Customer history:</strong> contact info, bookings, and online orders in one view for staff.</li>
           <li><strong>Mobile-optimized:</strong> storefront and admin are responsive across phone and tablet.</li>
           <li><strong>Search foundations:</strong> complete Google Business Profile, consistent NAP, on-page SEO, and structured data.</li>
+          <li><strong>AI-readiness:</strong> JSON-LD structured data improves machine readability for search engines and LLMs.</li>
         </ul>
 
         <h4 style="margin-top:10px">How we measured success</h4>
@@ -284,7 +286,6 @@
         <a href="mailto:alexmendoza99@gmail.com">Email</a>
         <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
-        <!-- Note: Back-to-top requires an element with id="top" (e.g., on <body> or <header>) -->
         <a href="#top" class="back-to-top">Back to top ↑</a>
       </div>
     </div>
