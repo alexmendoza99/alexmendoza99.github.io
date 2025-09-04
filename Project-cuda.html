@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GPU Kernels — Case Study | Alex Mendoza</title>
+  <meta name="description" content="Case study for CUDA practice kernels: histogram, scan, and reduction with tests." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <span class="logo" aria-hidden="true">AM</span>
+        <span class="brand-text">Alex Mendoza</span>
+      </a>
+      <nav aria-label="Breadcrumb">
+        <a href="./index.html#past-projects">← Past Projects</a>
+      </nav>
+      <div class="cta">
+        <a class="btn ghost" href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a class="btn primary" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:42px 0 32px">
+    <section aria-labelledby="title">
+      <h1 id="title">GPU Kernels — Histogram, Scan, Reduction</h1>
+      <p class="subtitle">CUDA practice kernels with attention to memory coalescing, bank conflicts, and occupancy. Includes tests and simple benchmarks.</p>
+
+      <div class="meta-grid">
+        <div class="card pad"><strong>Role</strong><br>Systems/parallel programming</div>
+        <div class="card pad"><strong>Scope</strong><br>Practice & benchmarking</div>
+        <div class="card pad"><strong>Stack</strong><br>CUDA, C++</div>
+        <div class="card pad"><strong>Links</strong><br><a href="#" aria-disabled="true">Repo (add link)</a></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="approach">
+      <h2 id="approach">Approach</h2>
+      <ol class="card pad">
+        <li>Baseline single‑thread implementations for correctness comparisons.</li>
+        <li>Parallel versions using shared memory and warp‑level primitives where appropriate.</li>
+        <li>Measured occupancy and memory throughput; iterated on block sizes and tiling.</li>
+        <li>Added unit tests and a simple timing harness.</li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="learnings">
+      <h2 id="learnings">Notes & Learnings</h2>
+      <div class="card pad">
+        <ul>
+          <li>Histogram: avoided contention with privatization by block and a final reduction.</li>
+          <li>Scan: experimented with Blelloch vs. Hillis–Steele; compared bank conflict behavior.</li>
+          <li>Reduction: unrolling and warp shuffles reduced shared memory pressure.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot-row">
+      <span>© <span id="year"></span> Alex Mendoza</span>
+      <span class="small">Case study</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

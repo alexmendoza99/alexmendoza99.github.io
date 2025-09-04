@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Page: The Studio 26 — Case Study
+    Author: Alexandrea Mendoza
+    Purpose: Showcase role, stack, APIs, demo credentials, screens, approach, SEO work, and testing.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> The Studio 26 — Case Study | Alexandrea Mendoza</title>
+  <meta name="description" content="Case study for The Studio 26: unified platform for bookings, products, payments, and shipping with admin workflows and SEO.">
+
+  <!-- Fonts & global stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <span class="logo" aria-hidden="true">AM</span>
+        <span class="brand-text">Alexandrea Mendoza</span>
+      </a>
+
+      <!-- Simple breadcrumb back to main page -->
+      <nav aria-label="Breadcrumb">
+        <a href="./index.html#past-projects">← Past Projects</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="cta">
+        <a class="btn ghost" href="mailto:ammendo28@gmail.com">Email</a>
+        <a class="btn primary" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================= MAIN ======================== -->
+  <main class="container" style="padding:42px 0 32px">
+
+    <!-- ===== HERO: title, intro, and meta cards ===== -->
+    <section aria-labelledby="title">
+      <h1 id="title">The Studio 26 — E-commerce and Class Booking</h1>
+        <p class="subtitle">
+            I served as <strong>project manager and developer</strong>, coordinating client and team meetings and delivering a unified platform
+            for bookings, products, payments, and shipping with an admin dashboard—built with <strong>React/Next.js</strong> on the frontend and
+            <strong>Node.js/Express</strong> services on the backend.
+        </p>
+
+
+      <!-- Meta grid: four small summary cards -->
+      <div class="meta-grid">
+        <!-- Card: Role & Timeline -->
+        <div class="card pad">
+          <strong>Role &amp; timeline</strong>
+          <ul class="meta-list">
+            <li>Project Manager, Developer, SEO Consultant &amp; Marketing Consultant</li>
+            <li>2023 – Present</li>
+          </ul>
+        </div>
+
+        <!-- Card: Tech stack -->
+        <div class="card pad">
+            <strong>Stack</strong>
+            <ul class="meta-list">
+                <li><b>Frontend:</b> React, Next.js, TypeScript</li>
+                <li><b>Backend:</b> Node.js, Express</li>
+                <li><b>Database:</b> MongoDB</li>
+                <li><b>Payments/Shipping:</b> Stripe, ShipStation</li>
+            </ul>
+        </div>
+
+        <!-- Card: APIs & external services used -->
+        <div class="card pad">
+          <strong>APIs &amp; services</strong>
+          <ul class="meta-list">
+            <li><b>Auth:</b> NextAuth (OAuth), bcrypt</li>
+            <li><b>Email:</b> Nodemailer, Gmail API</li>
+            <li><b>Payments:</b> Stripe (Checkout/POS)</li>
+            <li><b>Shipping:</b> ShipStation webhooks</li>
+            <li><b>Storage/CDN:</b> AWS S3</li>
+            <li><b>Deploy:</b> Vercel Pro</li>
+          </ul>
+        </div>
+
+        <!-- Card: External links (live, prototype, demo anchor) -->
+        <div class="card pad">
+          <strong>Links</strong>
+          <ul class="mini-links">
+            <li><a href="https://www.thestudio26.net/" target="_blank" rel="noopener">Live site (client)</a></li>
+            <li><a href="https://www.figma.com/proto/AFFua0iypNJS6dsbxaB5Zr/The-Studio-26-Prototype?node-id=0-1&t=Gu25F4O717oOaL6P-1" target="_blank" rel="noopener">Figma prototype</a></li>
+            <li><a href="#demo">Test demo &amp; credentials</a></li>
+          </ul>
+          <p class="note" style="margin-top:6px">
+            Test credentials are for the demo only and will not work on the client’s live site.
+          </p>
+        </div>
+      </div>
+      <!-- /meta-grid -->
+    </section>
+    <!-- /HERO -->
+
+    <!-- ===== DEMO: test deployment + credentials (demo-only) ===== -->
+    <section class="section" id="demo" aria-labelledby="demo-title">
+      <h2 id="demo-title">Demo &amp; Test Login</h2>
+      <div class="grid-2">
+        <!-- Card: demo links -->
+        <div class="card pad">
+          <p><strong>Open the test deployment (Vercel):</strong></p>
+          <div class="row">
+            <a class="btn primary" href="https://the-studio26-website-six.vercel.app/" target="_blank" rel="noopener">Open test site</a>
+            <a class="btn" href="https://the-studio26-website-six.vercel.app/Login" target="_blank" rel="noopener">Open admin dashboard</a>
+          </div>
+          <p class="note" style="margin-top:10px">
+            These credentials work on the <strong>test deployment only</strong> and will
+            <strong>not</strong> work on the live The Studio 26 LLC website.
+          </p>
+        </div>
+
+        <!-- Card: demo credentials (copy-to-clipboard) -->
+        <div class="card pad">
+          <h3 class="no-top">Test credentials</h3>
+          <div class="creds">
+            <small>Email</small>
+            <div class="row" style="margin:6px 0">
+              <code id="demo-email">portfoliotest@gmail.com</code>
+              <button class="btn" type="button" data-copy="#demo-email">Copy</button>
+            </div>
+
+            <small>Password</small>
+            <div class="row" style="margin:6px 0">
+              <code id="demo-pass">portfolio</code>
+              <button class="btn" type="button" data-copy="#demo-pass">Copy</button>
+            </div>
+          </div>
+          <p class="note">Test environment: email sending and payment capture disabled; sample data may reset.</p>
+        </div>
+      </div>
+    </section>
+    <!-- /DEMO -->
+
+    <!-- ===== SCREENS: two key thumbnails linking to demo routes ===== -->
+    <section class="section" aria-labelledby="shots">
+      <h2 id="shots">Screens</h2>
+
+      <div class="grid two-up">
+        <!-- Shot: storefront home -->
+        <figure class="shot">
+          <a href="https://the-studio26-website-six.vercel.app/" target="_blank" rel="noopener">
+            <img src="assets/thestudio26homepage.png"
+                 alt="Storefront home page with navigation, featured classes, and products"
+                 loading="lazy" decoding="async">
+          </a>
+          <figcaption>Storefront — Home (Test Site)</figcaption>
+        </figure>
+
+        <!-- Shot: admin dashboard -->
+        <figure class="shot">
+          <a href="https://the-studio26-website-six.vercel.app/Login" target="_blank" rel="noopener">
+            <img src="assets/thestudio26adminpage.png"
+                 alt="Admin dashboard overview with KPIs, recent orders, and quick actions"
+                 loading="lazy" decoding="async">
+          </a>
+          <figcaption>Admin — Dashboard (Test Site)</figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- /SCREENS -->
+
+    <!-- ===== OVERVIEW: problem and responsibilities ===== -->
+    <section class="section" aria-labelledby="overview">
+      <h2 id="overview">Overview</h2>
+      <div class="grid-2">
+        <!-- Card: problem & outcome -->
+        <div class="card pad">
+          <h3 class="no-top">Problem</h3>
+          <p>Operations relied on separate tools and spreadsheets for classes, products, and fulfillment. Errors and duplicated work were common; the site felt disjointed.</p>
+          <h3>Outcome</h3>
+          <p>One system for schedules, orders, payments, and shipping. Admins use a single dashboard with standardized flows and customer history.</p>
+        </div>
+
+        <!-- Card: responsibilities -->
+        <div class="card pad">
+          <h3 class="no-top">Responsibilities</h3>
+          <ul>
+            <li>Facilitated client ↔ team meetings; owned scope, backlog, and milestones.</li>
+            <li>Implemented <strong>rental equipment management</strong> and related admin workflows.</li>
+            <li>Defined MongoDB collections, indexes, and validation; assisted initial data migration.</li>
+            <li>Built reusable page templates and a consistent component/theme system.</li>
+            <li>Delivered and implemented customer management systems (admin views for contact info, bookings, and online orders).</li>
+            <li>Contributed extensively to UI/UX: layout, color system, interaction patterns.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- /OVERVIEW -->
+
+    <!-- ===== APPROACH: project steps ===== -->
+    <section class="section" aria-labelledby="approach">
+      <h2 id="approach">Approach</h2>
+      <div class="card pad">
+        <ol class="tight">
+          <li>Discovery and scoping with the owner; translated requirements into a milestone plan.</li>
+          <li>Created a <strong>Figma prototype</strong> to align on information architecture and visual direction.</li>
+          <li>Modeled data for products, classes, rentals, and customers; added indexes for common queries.</li>
+          <li>Implemented API routes and admin form flows; integrated Stripe and ShipStation webhooks.</li>
+          <li>Staged deployments and content entry; prepared handoff documentation.</li>
+        </ol>
+      </div>
+    </section>
+    <!-- /APPROACH -->
+
+    <!-- ===== SEO & Marketing: outcomes (privacy-safe) ===== -->
+    <section class="section" id="seo" aria-labelledby="seo-title">
+      <h2 id="seo-title">SEO &amp; Marketing</h2>
+      <div class="card pad">
+        <h3 class="no-top">Outcomes &amp; Verification (privacy-safe)</h3>
+        <ul>
+          <li><strong>Unified ops:</strong> one admin dashboard replaced spreadsheets and scattered tools.</li>
+          <li><strong>Standardized flows:</strong> bookings, orders, and shipping use consistent, documented steps.</li>
+          <li><strong>Customer history:</strong> contact info, bookings, and online orders in one view for staff.</li>
+          <li><strong>Mobile-optimized:</strong> storefront and admin are responsive across phone and tablet.</li>
+          <li><strong>Search foundations:</strong> complete Google Business Profile, consistent NAP, on-page SEO, and structured data.</li>
+        </ul>
+
+        <h4 style="margin-top:10px">How we measured success</h4>
+        <ul>
+          <li>Defined goals for booking completion, admin task time, and support issues.</li>
+          <li>Instrumented funnels and events; monitored search visibility and site health.</li>
+          <li>Reviewed Lighthouse checks and basic uptime/error monitoring.</li>
+        </ul>
+
+        <p class="note">
+          Quantitative metrics (traffic, conversions, revenue) are available on request with client approval.
+        </p>
+      </div>
+    </section>
+    <!-- /SEO & MARKETING -->
+
+    <!-- ===== TESTING: summary of QA layers ===== -->
+    <section class="section" id="testing" aria-labelledby="testing-title">
+      <h2 id="testing-title">Testing</h2>
+      <div class="card pad">
+        <p class="no-top"><strong>Strategy:</strong> layered QA using automated end-to-end tests, unit tests, and scripted manual passes. I wrote the WebDriver scripts, coordinated manual testing, and documented results.</p>
+        <ul class="compact">
+          <li><strong>Automated E2E:</strong> Selenium WebDriver + Mocha validating critical flows (customer CRUD &amp; search, booking, checkout, admin auth/permissions). Latest run: <em>18 tests passing</em>.</li>
+          <li><strong>Unit tests:</strong> Jest for data validators, helpers, and API utilities.</li>
+          <li><strong>Manual testing:</strong> step-by-step scripts covering edge cases (invalid email/phone, field length limits, duplicate detection); mobile viewport checks; issues triaged and retested.</li>
+          <li><strong>Environment:</strong> macOS (M1), Chrome 135; seeded test DB; npm scripts to run suites.</li>
+          <li><strong>Artifacts:</strong> test plan and result logs available on request.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- /TESTING -->
+
+  </main>
+  <!-- /MAIN -->
+
+  <!-- ======================= FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-brand">
+        <a class="brand" href="./index.html">
+          <span class="logo" aria-hidden="true">AM</span>
+          <span class="brand-text">Alexandrea Mendoza</span>
+        </a>
+        <small>© <span id="year"></span> Alexandrea Mendoza — Portfolio</small>
+      </div>
+
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="./index.html#past-projects">Past Projects</a>
+        <a href="./index.html#experience">Experience</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#contact">Contact</a>
+        <a class="btn ghost sm" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+
+      <div class="foot-social" aria-label="Contact and social">
+        <a href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- Note: Back-to-top requires an element with id="top" (e.g., on <body> or <header>) -->
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+  <!-- ========================= SCRIPTS ====================== -->
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy-to-clipboard for demo credentials
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sel = btn.getAttribute('data-copy');
+        const el = document.querySelector(sel);
+        if (!el) return;
+        navigator.clipboard.writeText(el.textContent.trim())
+          .then(() => {
+            btn.textContent = 'Copied';
+            setTimeout(() => btn.textContent = 'Copy', 1200);
+          });
+      });
+    });
+  </script>
+  <!-- /SCRIPTS -->
+</body>
+</html>

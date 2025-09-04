@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alex Mendoza — Portfolio</title>
-  <meta name="description" content="Software engineer and builder. Full stack web, graphics (JOGL/OpenGL), and data projects." />
+  <meta name="description" content="Software engineer and builder. Systems, APIs, data, and graphics." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <span class="brand-text">Alex Mendoza</span>
       </a>
       <nav aria-label="Primary">
-        <a href="#projects">Projects</a>
+        <a href="#past-projects">Past Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -34,94 +34,95 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="card intro">
-        <span class="pill">Full stack • Graphics • Data</span>
+        <span class="pill">Software engineering • Systems • Graphics</span>
         <h1 id="hero-title">Builder of clean, reliable software</h1>
-        <p class="subtitle">Recent CS graduate and hands on engineer. I ship web apps (Next.js + MongoDB), graphics projects (JOGL/OpenGL), and data features. I care about clarity, performance, and user experience.</p>
+        <p class="subtitle">I design and implement well-structured software focused on correctness, maintainability, and performance. Comfortable in Java, Python, C++, and TypeScript, I work across services/APIs, data modeling, testing, and Linux tooling. Background in computer graphics and GPU programming (OpenGL/JOGL, CUDA).</p>
         <div class="stack">
-          <span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Node</span><span class="tag">MongoDB</span><span class="tag">Stripe</span><span class="tag">JOGL/OpenGL</span><span class="tag">Java</span><span class="tag">CUDA (basics)</span>
+          <span class="tag">Java</span><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">C++</span>
+          <span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">OOP</span><span class="tag">Testing</span>
+          <span class="tag">Node</span><span class="tag">Express</span><span class="tag">REST APIs</span>
+          <span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">AWS RDS</span>
+          <span class="tag">Git</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Linux</span>
+          <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">HTML/CSS</span>
+          <span class="tag">OpenGL/JOGL</span><span class="tag">GLSL</span><span class="tag">Maya</span><span class="tag">Blender</span><span class="tag">3D Modeling</span><span class="tag">Animation</span><span class="tag">CUDA (basics)</span>
         </div>
-        <div class="row hero-actions">
-          <a class="btn primary" href="#projects">See Projects</a>
+        <div class="row hero-actions" style="margin-top:18px">
+          <a class="btn primary" href="#past-projects">See Past Projects</a>
           <a class="btn" href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="card kpi-card">
-        <div class="kpis">
-          <div class="kpi"><h3>10–20</h3><p>students tutored weekly since 2019</p></div>
-          <div class="kpi"><h3>10+</h3><p>end to end features shipped</p></div>
-          <div class="kpi"><h3>5+</h3><p>graphics and academic projects</p></div>
-        </div>
-        <p class="note">Highlights from teaching, web, and graphics work.</p>
-      </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Selected Projects</h2>
+    <!-- PAST PROJECTS -->
+    <section class="section" id="past-projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Past Projects</h2>
+      <p class="note">Examples across web, graphics, and GPU work.</p>
       <div class="grid projects">
         <!-- Project 1 -->
-        <article class="item card" aria-labelledby="proj-s26-title">
-          <div class="thumb" role="img" aria-label="Studio 26 admin dashboard">
-            <span>Admin Dashboard</span>
-            <span>Next.js • MongoDB</span>
+        <article class="item card project" aria-labelledby="proj-s26-title">
+          <a class="stretched-link" href="project-studio26.html" aria-label="Read case study: Studio 26"></a>
+
+          <!-- thumbnail with image -->
+          <div class="thumb img-thumb" aria-label="Studio 26 storefront home page">
+            <img
+              src="assets/thestudio26homepage.png"
+              alt="Studio 26 storefront home page with featured classes and products"
+              loading="lazy" decoding="async">
+            <div class="thumb-chips">
+              <span>Storefront</span>
+              <span>React/Next.js • Node/Express</span>
+            </div>
           </div>
+
           <div class="meta">
-            <h3 id="proj-s26-title">Studio 26 — E‑commerce and Class Booking</h3>
-            <p>Custom small business platform: bookings, products, Stripe payments, ShipStation, and an intuitive admin dashboard. Replaced spreadsheets with a single system.</p>
-            <div class="tags"><span>Next.js</span><span>TypeScript</span><span>MongoDB</span><span>Stripe</span><span>ShipStation</span></div>
-            <div class="row">
-              <a class="btn" href="#" aria-disabled="true">Case study (add link)</a>
-              <a class="btn ghost" href="#" aria-disabled="true">Source (private)</a>
+            <h3 id="proj-s26-title">Studio 26 — E-commerce and Class Booking</h3>
+            <p>Unified bookings, products, Stripe, and ShipStation; managed the project and delivered admin workflows and customer management.</p>
+            <div class="tags">
+              <span>React</span><span>Next.js</span><span>TypeScript</span>
+              <span>Node.js</span><span>Express</span><span>MongoDB</span>
+              <span>Stripe</span><span>ShipStation</span>
             </div>
           </div>
         </article>
+
         <!-- Project 2 -->
-        <article class="item card" aria-labelledby="proj-jogl-title">
+        <article class="item card project" aria-labelledby="proj-jogl-title">
+          <a class="stretched-link" href="project-jogl.html" aria-label="Read case study: JOGL Engine"></a>
           <div class="thumb" role="img" aria-label="OpenGL skybox and lighting">
             <span>Graphics</span>
             <span>JOGL/OpenGL</span>
           </div>
           <div class="meta">
             <h3 id="proj-jogl-title">OpenGL/JOGL Engine — Skybox and Lighting</h3>
-            <p>3D scene with textured models, skybox, ambient lighting, and camera controls. Focus on a clean GL pipeline and readable shaders.</p>
+            <p>Textured models, skybox, ambient lighting, and camera controls with a clean render loop and shader layout.</p>
             <div class="tags"><span>Java</span><span>JOGL</span><span>GLSL</span></div>
-            <div class="row">
-              <a class="btn" href="#" aria-disabled="true">Demo (add link)</a>
-              <a class="btn ghost" href="#" aria-disabled="true">Repo (add link)</a>
-            </div>
           </div>
         </article>
         <!-- Project 3 -->
-        <article class="item card" aria-labelledby="proj-cuda-title">
+        <article class="item card project" aria-labelledby="proj-cuda-title">
+          <a class="stretched-link" href="project-cuda.html" aria-label="Read case study: GPU Kernels"></a>
           <div class="thumb" role="img" aria-label="CUDA basics">
             <span>Parallel</span>
             <span>CUDA</span>
           </div>
           <div class="meta">
             <h3 id="proj-cuda-title">GPU Kernels — Histogram, Scan, Reduction</h3>
-            <p>Practice kernels with attention to memory coalescing and occupancy. Includes tests and simple benchmarks.</p>
+            <p>Practice kernels with attention to memory coalescing and occupancy; includes tests and simple benchmarks.</p>
             <div class="tags"><span>CUDA</span><span>C++</span><span>Unit tests</span></div>
-            <div class="row">
-              <a class="btn" href="#" aria-disabled="true">Write up (add link)</a>
-              <a class="btn ghost" href="#" aria-disabled="true">Repo (add link)</a>
-            </div>
           </div>
         </article>
         <!-- Project 4 -->
-        <article class="item card" aria-labelledby="proj-analytics-title">
+        <article class="item card project" aria-labelledby="proj-analytics-title">
+          <a class="stretched-link" href="project-analytics.html" aria-label="Read case study: Admin Analytics"></a>
           <div class="thumb" role="img" aria-label="Dashboard and analytics">
             <span>Data</span>
             <span>Dashboard</span>
           </div>
           <div class="meta">
             <h3 id="proj-analytics-title">Admin Analytics — Customers and Orders</h3>
-            <p>Dashboard widgets for cohorts, revenue, and order insights. Filter by month, quarter, and year.</p>
+            <p>Filterable cohorts and revenue insights to answer “what changed this month” in one view.</p>
             <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Charts</span></div>
-            <div class="row">
-              <a class="btn" href="#" aria-disabled="true">Screens (add link)</a>
-              <a class="btn ghost" href="#" aria-disabled="true">Repo (add link)</a>
-            </div>
           </div>
         </article>
       </div>
@@ -146,7 +147,7 @@
             <small>2021 – 2025</small>
           </div>
           <div>
-            Full stack web apps, graphics assignments (JOGL), and data features across several projects. Focus on readable code and practical shipping.
+            Systems work, full stack apps, graphics assignments (JOGL), and data features across several projects.
           </div>
         </div>
       </div>
@@ -156,17 +157,39 @@
     <section class="section" id="skills" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills</h2>
       <div class="skills">
-        <span class="chip">TypeScript</span>
-        <span class="chip">Next.js</span>
-        <span class="chip">Node</span>
-        <span class="chip">MongoDB</span>
-        <span class="chip">Stripe</span>
         <span class="chip">Java</span>
-        <span class="chip">JOGL/OpenGL</span>
-        <span class="chip">CUDA (basics)</span>
-        <span class="chip">Git and GitHub</span>
+        <span class="chip">Python</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">C++</span>
+        <span class="chip">Data Structures</span>
+        <span class="chip">Algorithms</span>
+        <span class="chip">OOP</span>
         <span class="chip">Unit Testing</span>
+
+        <span class="chip">Node</span>
+        <span class="chip">Express</span>
         <span class="chip">REST APIs</span>
+        <span class="chip">SQL</span>
+        <span class="chip">MongoDB</span>
+        <span class="chip">AWS RDS</span>
+        <span class="chip">JWT/Auth</span>
+
+        <span class="chip">Git</span>
+        <span class="chip">GitHub Actions</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Linux</span>
+
+        <span class="chip">React</span>
+        <span class="chip">Next.js</span>
+        <span class="chip">HTML/CSS</span>
+
+        <span class="chip">OpenGL/JOGL</span>
+        <span class="chip">GLSL</span>
+        <span class="chip">Maya</span>
+        <span class="chip">Blender</span>
+        <span class="chip">3D Modeling</span>
+        <span class="chip">Animation</span>
+        <span class="chip">CUDA (basics)</span>
       </div>
     </section>
 
@@ -184,7 +207,7 @@
       <div class="contact-card">
         <div class="card">
           <h3 class="no-top">Let’s talk</h3>
-          <p>I am exploring new grad and entry level roles in full stack, platform, and graphics. Open to Bay Area and remote.</p>
+          <p>If you are hiring for software engineer roles, I welcome a conversation. Code samples or a brief walkthrough available on request.</p>
           <div class="row">
             <a class="btn primary" href="mailto:alexmendoza99@gmail.com">Email me</a>
             <a class="btn" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">View resume</a>
@@ -198,7 +221,6 @@
           </ul>
         </div>
       </div>
-      <p class="note">Tip: keep project links updated with repos, case studies, and short READMEs that state the problem, your role, and the result.</p>
     </section>
   </main>
 
