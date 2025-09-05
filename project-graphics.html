@@ -1,206 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    Page: Graphics & OpenGL — Gallery
-    Author: Alex Mendoza
-    Purpose: Personal gallery of 3D modeling, animation, and OpenGL/JOGL experiments.
-  -->
+  <!-- Page: Graphics — 3D Modeling & Animation (Gallery) | Author: Alexandrea Mendoza -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Graphics & OpenGL — Gallery | Alex Mendoza</title>
-  <meta name="description" content="Personal gallery: 3D modeling, animation, and JOGL/OpenGL shader experiments. Maya/Blender assets, GLSL studies, and renders." />
+  <title>Graphics — 3D Modeling & Animation | Alexandrea Mendoza</title>
+  <meta name="description" content="Gallery organized by software: Photoshop, Maya, Blender, and OpenGL. Brief notes on how each piece was made." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-scoped tweaks (optional: move to style.css later) -->
   <style>
-    /* Responsive gallery grid */
-    .gallery-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap:16px;
-    }
-    .gallery-item{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-    .gallery-media{
-      width:100%;
-      aspect-ratio: 16/9;
-      object-fit:cover;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background:var(--panel);
-      display:block;
-    }
-    .gallery-item figcaption{
-      font-size:14px;
-      color:var(--muted);
-    }
-    /* Narrower hero to keep the page light */
-    .gallery-intro.card.pad{ padding:20px }
+    /* Page-scoped tweaks */
+    html{scroll-behavior:smooth}
+    .gallery-intro.card.pad{padding:20px}
+    .section-nav.card.pad{padding:14px}
+    .section-nav .row{flex-wrap:wrap}
+
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .gallery-grid.two-col{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+    @media (max-width:700px){.gallery-grid.two-col{grid-template-columns:1fr}}
+
+    .gallery-item{position:relative;overflow:visible;border-radius:16px;display:flex;flex-direction:column;gap:8px}
+    .gallery-media{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;border:1px solid var(--border);background:var(--panel);display:block;transform:translateZ(0)}
+    .gallery-item figcaption{font-size:14px;color:var(--muted)}
+    .callout{color:var(--muted);font-size:14px;margin:6px 0 0}
+
+    /* Brighten + zoom */
+    .gallery-media.brighten{filter:brightness(1.18) contrast(1.07) saturate(1.06);transition:filter .18s ease,transform .18s ease}
+    .gallery-media.brighten:hover{filter:brightness(1.26) contrast(1.1) saturate(1.08);transform:translateY(-1px)}
+    @media (prefers-color-scheme:dark){.gallery-media.brighten{filter:brightness(1.28) contrast(1.08) saturate(1.06)}}
+
+    .gallery-media.zoomable{cursor:zoom-in;will-change:transform;transform:scale(1);transition:transform .22s ease,box-shadow .22s ease,filter .18s ease;transform-origin:center}
+    .gallery-item:hover .gallery-media.zoomable,
+    .gallery-item:focus-within .gallery-media.zoomable{transform:scale(1.35);box-shadow:0 22px 60px rgba(9,20,40,.24);filter:brightness(1.04) contrast(1.02);z-index:5}
+    @media (prefers-reduced-motion:reduce){.gallery-media.zoomable{transition:none}}
   </style>
 </head>
 
 <body id="top">
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="./index.html">
         <span class="logo" aria-hidden="true">AM</span>
-        <span class="brand-text">Alex Mendoza</span>
+        <span class="brand-text">Alexandrea Mendoza</span>
       </a>
       <nav aria-label="Breadcrumb">
         <a href="./index.html#past-projects">← Past Projects</a>
       </nav>
       <div class="cta">
-        <a class="btn ghost" href="mailto:alexmendoza99@gmail.com">Email</a>
-        <a class="btn primary" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn ghost" href="mailto:ammendo28@gmail.com">Email</a>
+        <a class="btn primary" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </header>
 
-  <!-- MAIN -->
   <main class="container" style="padding:42px 0 32px">
     <!-- Intro -->
     <section aria-labelledby="title">
-      <h1 id="title">Graphics &amp; OpenGL — Gallery</h1>
+      <h1 id="title">Graphics — 3D Modeling &amp; Animation</h1>
       <div class="card pad gallery-intro">
         <p class="no-top subtitle" style="margin:0">
-          A personal gallery of 3D work and OpenGL/JOGL experiments. My portfolio focuses on software engineering,
-          but I enjoy building models, writing small shaders, and exploring lighting/animation—it's a fun creative outlet
-          that informs how I think about tools and UX.
+          Gallery organized by tool with brief notes on process: modeling, UVs, materials, lighting, rigging, and simple animation.
         </p>
       </div>
-    </section>
 
-    <!-- Highlights -->
-    <section class="section" aria-labelledby="highlights-title">
-      <h2 id="highlights-title">Highlights</h2>
-      <div class="gallery-grid">
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/highlight-01.png" alt="OpenGL scene with skybox and textured model">
-          <figcaption>JOGL sandbox — skybox + textured hero model.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/highlight-02.png" alt="Studio render with area light and soft shadows">
-          <figcaption>Studio render — soft key light, simple material.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/highlight-03.png" alt="Viewport capture showing normals/wireframe debug">
-          <figcaption>Shader doodle — normals &amp; wireframe debug view.</figcaption>
-        </figure>
-      </div>
-      <p class="note" style="margin-top:8px">Tip: click a thumbnail to open full-size (links can point to originals if you want).</p>
-    </section>
-
-    <!-- Models / Renders -->
-    <section class="section" aria-labelledby="models-title">
-      <h2 id="models-title">Models &amp; Renders</h2>
-      <div class="gallery-grid">
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/model-01.png" alt="Hard-surface prop render">
-          <figcaption>Hard-surface prop — subdivision + bevel workflow.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/model-02.png" alt="Organic model turntable render">
-          <figcaption>Organic form — turntable render with simple SSS.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/model-03.png" alt="UV layout and texture maps preview">
-          <figcaption>UV layout &amp; maps — base color, roughness, normal.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Animations -->
-    <section class="section" aria-labelledby="anim-title">
-      <h2 id="anim-title">Animations</h2>
-      <div class="gallery-grid">
-        <figure class="gallery-item card pad">
-          <video class="gallery-media" controls preload="metadata" poster="assets/gallery/anim-01-poster.png">
-            <source src="assets/gallery/anim-01.mp4" type="video/mp4">
-          </video>
-          <figcaption>Looping orbit + camera dolly; exported as MP4 for web.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <video class="gallery-media" controls preload="metadata" poster="assets/gallery/anim-02-poster.png">
-            <source src="assets/gallery/anim-02.mp4" type="video/mp4">
-          </video>
-          <figcaption>Simple keyframe path — spin &amp; ease-in/out timing.</figcaption>
-        </figure>
-      </div>
-      <p class="note" style="margin-top:8px">Videos are compressed for fast loading; originals available on request.</p>
-    </section>
-
-    <!-- Shader Doodles -->
-    <section class="section" aria-labelledby="shader-title">
-      <h2 id="shader-title">Shader Doodles</h2>
-      <div class="gallery-grid">
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/shader-01.png" alt="Ambient and diffuse pass comparison">
-          <figcaption>GLSL — ambient/diffuse passes with simple materials.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/shader-02.png" alt="Normal mapping preview on panel surface">
-          <figcaption>Normal mapping on a beveled panel; tiled UVs.</figcaption>
-        </figure>
-        <figure class="gallery-item card pad">
-          <img class="gallery-media" src="assets/gallery/shader-03.png" alt="Wireframe overlay used for debugging">
-          <figcaption>Wireframe overlay for mesh/debug checks.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Tools (kept lightweight; not a full case study) -->
-    <section class="section" aria-labelledby="tools-title">
-      <h2 id="tools-title">Tools</h2>
-      <div class="card pad">
-        <div class="skills">
-          <span class="chip">Maya</span>
-          <span class="chip">Blender</span>
-          <span class="chip">OpenGL/JOGL</span>
-          <span class="chip">GLSL</span>
-          <span class="chip">GIMP/Photoshop</span>
+      <!-- Section jump buttons -->
+      <div class="section-nav card pad" style="margin-top:10px">
+        <div class="row">
+          <a class="btn sm" href="#photoshop">Photoshop</a>
+          <a class="btn sm" href="#maya">Maya</a>
+          <a class="btn sm" href="#blender">Blender</a>
+          <a class="btn sm" href="#opengl">OpenGL</a>
         </div>
-        <p class="note" style="margin-top:8px">If you’d like a deeper technical breakdown (render loop, loaders, shader code), I’m happy to walk through it briefly.</p>
+      </div>
+    </section>
+
+    <!-- Photoshop -->
+    <section class="section" id="photoshop" aria-labelledby="ps-title">
+      <h2 id="ps-title">Photoshop — touch-ups &amp; export</h2>
+      <div class="card pad">
+        <ul class="compact">
+          <li>Light cleanup on final frames (levels/curves, small seam fixes).</li>
+          <li>Web exports with sensible resolution and compression.</li>
+        </ul>
+        <p class="note">Primary work was done in Maya; Photoshop usage was minimal.</p>
+      </div>
+    </section>
+
+    <!-- Maya -->
+    <section class="section" id="maya" aria-labelledby="maya-title">
+      <h2 id="maya-title">Maya</h2>
+
+      <!-- Still Life -->
+      <h3 class="no-top" style="margin-top:8px">Still Life — five personal items</h3>
+      <p class="callout">
+        One-to-one models of five real desk items. Built from scratch in Maya: modeling, UV mapping, materials, lighting, and render setup.
+      </p>
+      <div class="gallery-grid two-col" style="margin-top:12px">
+        <figure class="gallery-item card pad">
+          <img class="gallery-media brighten zoomable" src="assets/3DMayaStillLife1.jpg" alt="Still life 1/5">
+          <figcaption>Still life — 1/5</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media brighten zoomable" src="assets/3DMayaStillLife2.jpg" alt="Still life 2/5">
+          <figcaption>Still life — 2/5</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media brighten zoomable" src="assets/3DMayaStillLife3.jpeg" alt="Still life 3/5">
+          <figcaption>Still life — 3/5</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media brighten zoomable" src="assets/3DMayaStillLife4.jpeg" alt="Still life 4/5">
+          <figcaption>Still life — 4/5</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media brighten zoomable" src="assets/3DMayaStillLife5.jpeg" alt="Still life 5/5">
+          <figcaption>Still life — 5/5</figcaption>
+        </figure>
+      </div>
+
+      <!-- Surreal remix -->
+      <h3 style="margin-top:28px">Surreal remix — same five items</h3>
+      <p class="callout">
+        Creative set using the same meshes with new lighting and compositions aimed at mood and contrast.
+      </p>
+      <div class="gallery-grid two-col" style="margin-top:12px">
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj1.jpg" alt="Surreal 1"><figcaption>Surreal — 1</figcaption></figure>
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj2.jpg" alt="Surreal 2"><figcaption>Surreal — 2</figcaption></figure>
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj3.jpg" alt="Surreal 3"><figcaption>Surreal — 3</figcaption></figure>
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj4.jpg" alt="Surreal 4"><figcaption>Surreal — 4</figcaption></figure>
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj5.jpg" alt="Surreal 5"><figcaption>Surreal — 5</figcaption></figure>
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj6.jpg" alt="Surreal 6"><figcaption>Surreal — 6</figcaption></figure>
+        <figure class="gallery-item card pad"><img class="gallery-media zoomable" src="assets/3DMayaProj7.jpg" alt="Surreal 7"><figcaption>Surreal — 7</figcaption></figure>
+      </div>
+
+      <!-- Character -->
+      <h3 style="margin-top:28px">Original character — model &amp; look</h3>
+      <p class="callout">
+        Custom character model with base topology, UVs, and material look-dev. A short facial animation test exists on request.
+      </p>
+      <div class="gallery-grid two-col" style="margin-top:12px">
+        <figure class="gallery-item card pad">
+          <img class="gallery-media zoomable" src="assets/3DMayaOC1.JPG" alt="Character — view A">
+          <figcaption>Character — view A</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <img class="gallery-media zoomable" src="assets/3DMayaOC2.JPG" alt="Character — view B">
+          <figcaption>Character — view B</figcaption>
+        </figure>
+      </div>
+
+      <!-- Animation -->
+      <h3 style="margin-top:28px">Rigged animation clips</h3>
+      <p class="callout">
+        Full-body model with skinning (weight painting), skeletal rigging, and keyed motion.
+      </p>
+      <div class="gallery-grid two-col" style="margin-top:12px">
+        <figure class="gallery-item card pad">
+          <video class="gallery-media zoomable" controls playsinline preload="metadata">
+            <source src="assets/3DAnimMayaDrySpell.mp4" type="video/mp4" />
+          </video>
+          <figcaption>“Dry Spell”</figcaption>
+        </figure>
+        <figure class="gallery-item card pad">
+          <video class="gallery-media zoomable" controls playsinline preload="metadata">
+            <source src="assets/3DAnimMayaSpellShot.mp4" type="video/mp4" />
+          </video>
+          <figcaption>“Spell Shot”</figcaption>
+        </figure>
+      </div>
+      <p class="note" style="margin-top:8px">Videos are compressed for faster loading.</p>
+    </section>
+
+    <!-- Blender -->
+    <section class="section" id="blender" aria-labelledby="blender-title">
+      <h2 id="blender-title">Blender</h2>
+      <div class="card pad">
+        <p class="no-top">More info and images to come soon.</p>
+      </div>
+    </section>
+
+    <!-- OpenGL/JOGL -->
+    <section class="section" id="opengl" aria-labelledby="gl-title">
+      <h2 id="gl-title">OpenGL / JOGL</h2>
+      <div class="card pad">
+        <p class="no-top">More info and images to come soon.</p>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container foot">
       <div class="foot-brand">
         <a class="brand" href="./index.html">
           <span class="logo" aria-hidden="true">AM</span>
-          <span class="brand-text">Alex Mendoza</span>
+          <span class="brand-text">Alexandrea Mendoza</span>
         </a>
-        <small>© <span id="year"></span> Alex Mendoza — Portfolio</small>
+        <small>© <span id="year"></span> Alexandrea Mendoza — Portfolio</small>
       </div>
       <nav class="foot-links" aria-label="Footer navigation">
         <a href="./index.html#past-projects">Past Projects</a>
         <a href="./index.html#experience">Experience</a>
         <a href="./index.html#skills">Skills</a>
         <a href="./index.html#contact">Contact</a>
-        <a class="btn ghost sm" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn ghost sm" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
       <div class="foot-social" aria-label="Contact and social">
-        <a href="mailto:alexmendoza99@gmail.com">Email</a>
+        <a href="mailto:ammendo28@gmail.com">Email</a>
         <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/ammendo28/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="#top" class="back-to-top">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

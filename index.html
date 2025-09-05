@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Home — Professional portfolio of Alexandrea Mendoza -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alexandrea Mendoza — Portfolio</title>
-  <meta name="description" content="Software engineer and builder. Systems, APIs, data, and graphics." />
+  <meta name="description" content="Software engineer focused on reliable systems, clean UX, and graphics. Services/APIs, data modeling, testing, and OpenGL." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#home">
+      <a class="brand" href="#home" aria-label="Go to top">
         <span class="logo" aria-hidden="true">AM</span>
         <span class="brand-text">Alexandrea Mendoza</span>
       </a>
@@ -24,38 +27,53 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="cta">
-        <a class="btn ghost" href="mailto:ammendo28@gmail.com" aria-label="Email Alex">Email</a>
+        <a class="btn ghost" href="mailto:ammendo28@gmail.com" aria-label="Email Alexandrea Mendoza">Email</a>
         <a class="btn primary" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </header>
 
-  <main class="container" id="home">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="card intro">
-        <span class="pill">Software engineering • Systems • Graphics</span>
-        <h1 id="hero-title">Builder of clean, reliable software</h1>
-        <p class="subtitle">I design and implement well-structured software focused on correctness, maintainability, and performance. Comfortable in Java, Python, C++, and TypeScript, I work across services/APIs, data modeling, testing, and Linux tooling. Background in computer graphics and GPU programming (OpenGL/JOGL, CUDA).</p>
-        <div class="stack">
-          <span class="tag">Java</span><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">C++</span>
-          <span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">OOP</span><span class="tag">Testing</span>
-          <span class="tag">Node</span><span class="tag">Express</span><span class="tag">REST APIs</span>
-          <span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">AWS RDS</span>
-          <span class="tag">Git</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Linux</span>
-          <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">HTML/CSS</span>
-          <span class="tag">OpenGL/JOGL</span><span class="tag">GLSL</span><span class="tag">Maya</span><span class="tag">Blender</span><span class="tag">3D Modeling</span><span class="tag">Animation</span><span class="tag">CUDA (basics)</span>
-        </div>
-        <div class="row hero-actions" style="margin-top:18px">
-          <a class="btn primary" href="#past-projects">See Past Projects</a>
-          <a class="btn" href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </section>
+  <!-- Main -->
+  <main id="home">
+    <div class="container">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title" aria-describedby="hero-sub">
+        <div class="card intro">
+          <span class="pill">Software engineering • Systems • Graphics</span>
 
-    <!-- PAST PROJECTS -->
-    <section class="section" id="past-projects" aria-labelledby="projects-title">
+          <h1 id="hero-title">Software engineer building reliable systems</h1>
+
+          <p class="subtitle" id="hero-sub">
+            I design and ship well-structured software with an emphasis on correctness, maintainability, and performance.
+            Comfortable in <strong>Java</strong>, <strong>Python</strong>, <strong>C++</strong>, and <strong>TypeScript</strong>.
+            I work across services/APIs, data modeling, automated testing, and Linux tooling. Background in computer graphics
+            and GPU programming (OpenGL/JOGL, CUDA).
+          </p>
+
+          <div class="stack">
+            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">TypeScript</span>
+            <span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">OOP</span><span class="tag">Testing</span>
+            <span class="tag">Node</span><span class="tag">Express</span><span class="tag">REST APIs</span>
+            <span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">AWS RDS</span>
+            <span class="tag">Git</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Linux</span>
+            <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">HTML/CSS</span>
+            <span class="tag">OpenGL/JOGL</span><span class="tag">GLSL</span><span class="tag">CUDA (basics)</span>
+            <span class="tag">Maya</span><span class="tag">Blender</span><span class="tag">3D Modeling</span><span class="tag">Animation</span>
+          </div>
+
+          <div class="row hero-actions" style="margin-top:18px">
+            <a class="btn primary" href="#past-projects">See Past Projects</a>
+            <a class="btn" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            <a class="btn" href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/ammendo28/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  <!-- Past Projects -->
+  <section class="section" id="past-projects" aria-labelledby="projects-title">
+    <div class="container">
       <h2 id="projects-title">Past Projects</h2>
       <p class="note">Examples across web, graphics, and GPU work.</p>
 
@@ -63,7 +81,6 @@
         <!-- Project 1 — The Studio 26 -->
         <article class="item card project" aria-labelledby="proj-s26-title">
           <a class="stretched-link" href="project-studio26.html" aria-label="Read case study: The Studio 26"></a>
-
           <div class="thumb has-img">
             <img src="assets/thestudio26homepage.png"
                 alt="The Studio 26 storefront showing featured classes and products"
@@ -73,7 +90,6 @@
               <span class="badge">React/Next.js • Node/Express</span>
             </div>
           </div>
-
           <div class="meta">
             <h3 id="proj-s26-title">The Studio 26 — E-commerce and Class Booking</h3>
             <p>Unified bookings, products, Stripe, and ShipStation; managed the project and delivered admin workflows and customer management.</p>
@@ -88,7 +104,6 @@
         <!-- Project 2 — Folsom Family Tree Counseling -->
         <article class="item card project" aria-labelledby="proj-fftc-title">
           <a class="stretched-link" href="project-fftc.html" aria-label="Read case study: Folsom Family Tree Counseling"></a>
-
           <div class="thumb has-img">
             <img src="assets/fftc-services.png"
                 alt="Folsom Family Tree Counseling homepage"
@@ -98,7 +113,6 @@
               <span class="badge">SEO • Domain recovery</span>
             </div>
           </div>
-
           <div class="meta">
             <h3 id="proj-fftc-title">Folsom Family Tree Counseling — Site Migration &amp; SEO</h3>
             <p>Recovered the owner’s domain, rebuilt the website on a new hosting platform, and modernized the UX to drive bookings. Streamlined messaging and set up keyword-driven local SEO for the Folsom area.</p>
@@ -112,7 +126,6 @@
         <!-- Project 3 — This Portfolio -->
         <article class="item card project" aria-labelledby="proj-portfolio-title">
           <a class="stretched-link" href="project-portfolio.html" aria-label="Read case study: This Portfolio"></a>
-
           <div class="thumb has-img">
             <img src="assets/portfoliocard.jpg"
                 alt="Screenshot of this portfolio’s homepage"
@@ -122,230 +135,339 @@
               <span class="badge">Accessible UI</span>
             </div>
           </div>
-
           <div class="meta">
             <h3 id="proj-portfolio-title">This Portfolio — Lightweight, Accessible UI</h3>
-            <p>Hand-built site showcasing my front-end design &amp; implementation: semantic HTML, modern CSS, and small progressive JS/TypeScript.</p>
+            <p>Hand-built site that highlights front-end design and implementation: semantic HTML, modern CSS, and small progressive JS/TypeScript.</p>
             <div class="tags">
               <span>TypeScript</span><span>JavaScript</span><span>HTML/CSS</span>
             </div>
           </div>
         </article>
 
-        <!-- Project 4 — Graphics & OpenGL -->
+        <!-- Project 4 — 3D Graphics (Maya) -->
         <article class="item card project" aria-labelledby="proj-graphics-title">
-          <a class="stretched-link" href="project-graphics.html" aria-label="Read case study: Graphics & OpenGL"></a>
-
+          <a class="stretched-link" href="project-graphics.html" aria-label="View gallery: 3D Modeling & Animation"></a>
           <div class="thumb has-img">
             <img
-              src="assets/graphics-thumb.jpg"
-              alt="OpenGL scene with textured models, skybox, and lighting"
+              src="assets/3DMayaProj5.jpg"
+              alt="Surreal render from the Maya still-life remix series"
               loading="lazy" decoding="async">
             <div class="thumb-chips bottom">
-              <span class="badge">3D Modeling &amp; Animation</span>
-              <span class="badge">OpenGL/JOGL • GLSL</span>
+              <span class="badge">Maya • UV/Lighting</span>
+              <span class="badge">Rigging &amp; Animation</span>
             </div>
           </div>
-
           <div class="meta">
-            <h3 id="proj-graphics-title">Graphics &amp; OpenGL — Modeling, Lighting, Animation</h3>
-            <p>Custom JOGL engine with skybox, textured models, ambient/directional lighting, and camera controls. Shader pipeline work plus assets modeled in Maya/Blender.</p>
+            <h3 id="proj-graphics-title">Graphics — 3D Modeling &amp; Animation</h3>
+            <p>Gallery of still-life studies, a surreal remix set, an original character model, and two rigged clips. Built in Maya with custom UVs, materials, lighting, and render passes. Notes for Blender/OpenGL sections included.</p>
             <div class="tags">
-              <span>OpenGL/JOGL</span><span>GLSL</span><span>Java</span>
-              <span>Maya</span><span>Blender</span><span>3D Modeling</span><span>Animation</span>
+              <span>Maya</span><span>UV Mapping</span><span>Materials/Lighting</span>
+              <span>Rigging</span><span>Animation</span><span>OpenGL/JOGL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 — Crescendo Music Studio (Coming Soon) -->
+        <article class="item card project" aria-labelledby="proj-crescendo-title">
+          <a class="stretched-link" href="#"
+            aria-disabled="true" tabindex="-1" onclick="return false;"
+            aria-label="Crescendo Music Studio (coming soon)"></a>
+          <div class="thumb has-img">
+            <img
+              src="assets/portfoliocard.jpg"
+              alt="Crescendo Music Studio — placeholder card image"
+              loading="lazy" decoding="async">
+            <div class="thumb-chips bottom">
+              <span class="badge">Coming Soon</span>
+              <span class="badge">Design &amp; Build</span>
+            </div>
+          </div>
+          <div class="meta">
+            <h3 id="proj-crescendo-title">Crescendo Music Studio — Website</h3>
+            <p>Client site in progress. Case study and screenshots will be added here.</p>
+            <div class="tags">
+              <span>React</span><span>TypeScript</span><span>Node</span><span>SEO</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 — Pacific Shade (Coming Soon) -->
+        <article class="item card project" aria-labelledby="proj-pacificshade-title">
+          <a class="stretched-link" href="#"
+            aria-disabled="true" tabindex="-1" onclick="return false;"
+            aria-label="Pacific Shade (coming soon)"></a>
+          <div class="thumb has-img">
+            <img
+              src="assets/portfoliocard.jpg"
+              alt="Pacific Shade — placeholder card image"
+              loading="lazy" decoding="async">
+            <div class="thumb-chips bottom">
+              <span class="badge">Coming Soon</span>
+              <span class="badge">Site Rebuild</span>
+            </div>
+          </div>
+          <div class="meta">
+            <h3 id="proj-pacificshade-title">Pacific Shade — Website</h3>
+            <p>Project page is under construction. Details and images will be published soon.</p>
+            <div class="tags">
+              <span>Next.js</span><span>TypeScript</span><span>CMS</span><span>Analytics</span>
             </div>
           </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EXPERIENCE -->
+    <!-- Experience -->
     <section class="section" id="experience" aria-labelledby="experience-title">
-      <h2 id="experience-title">Experience</h2>
+      <div class="container">
+        <h2 id="experience-title">Experience</h2>
 
-      <div class="timeline">
-
-        <!-- The Studio 26 LLC -->
-        <div class="tl card">
-          <div>
-            <strong>Website Developer &amp; SEO Advisor — The Studio 26 LLC</strong><br />
-            <small>April 2023 – Present</small>
+        <div class="timeline">
+          <!-- The Studio 26 LLC -->
+          <div class="tl card">
+            <div>
+              <strong>Website Developer &amp; SEO Advisor — The Studio 26 LLC</strong><br />
+              <small>April 2023 – Present</small>
+            </div>
+            <div>
+              <ul class="points">
+                <li>Built a <strong>custom e-commerce</strong> and <strong>class-booking</strong> platform with <strong>admin dashboards</strong>.</li>
+                <li>Integrated <strong>Stripe</strong> (Checkout/POS) and <strong>ShipStation</strong> webhooks for fulfillment.</li>
+                <li>Implemented <strong>rental equipment management</strong> and related admin workflows.</li>
+                <li>Modeled <strong>MongoDB</strong> collections, indexes, and validation; assisted initial data migration.</li>
+                <li>Delivered a <strong>customer management system</strong> (profiles with contact info, bookings, and online orders).</li>
+                <li>Built <strong>reusable page templates</strong> and a consistent component/theme system; contributed to UI/UX.</li>
+                <li>Implemented auth &amp; messaging: <strong>NextAuth</strong> (OAuth), admin auth/permissions, and email via <strong>Nodemailer</strong>/<strong>Gmail API</strong>.</li>
+                <li>Added <strong>JSON-LD structured data</strong> (schema.org) for classes/products/organization to improve SERP richness and LLM scraping.</li>
+                <li>Automated QA: <strong>Selenium WebDriver + Mocha</strong> end-to-end tests; <strong>Jest</strong> unit tests; scripted manual passes with logs.</li>
+                <li>Deployed on <strong>Vercel</strong>; asset storage/CDN via <strong>AWS S3</strong>; Lighthouse checks and analytics instrumentation.</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <ul class="points">
-              <li>Built a custom e-commerce &amp; class-booking platform with admin dashboards.</li>
-              <li>Integrated <strong>Stripe</strong> (Checkout/POS) and <strong>ShipStation</strong> webhooks for fulfillment.</li>
-              <li>Implemented rental equipment management and related admin workflows.</li>
-              <li>Modeled <strong>MongoDB</strong> collections, indexes, and validation; assisted initial data migration.</li>
-              <li>Delivered a customer management system (profiles with contact info, bookings, and online orders).</li>
-              <li>Built reusable page templates and a consistent component/theme system; contributed to UI/UX.</li>
-              <li>Implemented auth &amp; messaging: <strong>NextAuth</strong> (OAuth), admin auth/permissions, and email via <strong>Nodemailer</strong>/<strong>Gmail API</strong>.</li>
-              <li>Added <strong>JSON-LD structured data</strong> (schema.org) for classes/products/organization to improve SERP richness and LLM scraping.</li>
-              <li>Automated QA: <strong>Selenium WebDriver + Mocha</strong> end-to-end tests; <strong>Jest</strong> unit tests; scripted manual passes with logs.</li>
-              <li>Deployed on <strong>Vercel</strong>; asset storage/CDN via <strong>AWS S3</strong>; Lighthouse checks and analytics instrumentation.</li>
-            </ul>
+
+          <!-- Folsom Family Tree Counseling -->
+          <div class="tl card">
+            <div>
+              <strong>Website Developer &amp; Digital Strategy — Folsom Family Tree Counseling</strong><br />
+              <small>December 2023 – Present</small>
+            </div>
+            <div>
+              <ul class="points">
+                <li>Recovered the client-owned <strong>domain/DNS</strong> and <strong>migrated</strong> the site to a modern host.</li>
+                <li>Rebuilt <strong>responsive templates</strong>; implemented targeted <strong>HTML/CSS</strong> injections and performance fixes.</li>
+                <li>Streamlined messaging with <strong>contact-form routing</strong>, <strong>anti-spam</strong> filtering, and a simple spreadsheet process to track inquiries.</li>
+                <li><strong>Wrote all website copy</strong> end-to-end; collaborated on voice/tone and iterated quickly per client feedback.</li>
+                <li>Brand refresh: vector <strong>logo redraw (SVG)</strong>, palette and type scale, favicon and social/OG images.</li>
+                <li><strong>Local SEO</strong>: keyword research for the Folsom area, on-page structure, <strong>Google Business Profile</strong>, <strong>citations</strong>, and <strong>sitemap/robots</strong>.</li>
+                <li>Analytics and monitoring: set up <strong>GA4</strong> and <strong>Search Console</strong>; watched index coverage and search queries.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Teaching Assistant & Grader -->
+          <div class="tl card">
+            <div>
+              <strong>Teaching Assistant &amp; Grader — Database Management, CSU Sacramento</strong><br />
+              <small>January 2024 – May 2024</small>
+            </div>
+            <div>
+              <ul class="points">
+                <li>Supported advanced <strong>SQL</strong> topics: <strong>query optimization</strong>, <strong>normalization</strong> (1NF–3NF), <strong>indexing</strong> strategies, <strong>joins</strong>, and <strong>ER modeling</strong>.</li>
+                <li>Led weekly <strong>review sessions</strong> and office hours; coached students on <strong>schema design</strong> and debugging <strong>SQL</strong>.</li>
+                <li>Developed sample <strong>datasets</strong>, <strong>ERD diagrams</strong>, and step-by-step practice problems.</li>
+                <li>Assisted with project design and grading; created clear <strong>rubrics</strong> and delivered actionable feedback with quick turnaround.</li>
+                <li>Maintained course discussion channels (<strong>Canvas/Piazza</strong>); triaged common issues and posted concise how-to notes.</li>
+                <li>Proctored <strong>quizzes/exams</strong> and upheld <strong>academic integrity</strong> guidelines.</li>
+                <li>Stack: <strong>PostgreSQL</strong>/<strong>MySQL</strong>, ERD tools, <strong>VS Code</strong>/<strong>psql</strong>; basic <strong>shell</strong> and <strong>Git</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Full-Stack Software Engineering Intern -->
+          <div class="tl card">
+            <div>
+              <strong>Full-Stack Software Engineering Intern — Spearwave</strong><br />
+              <small>June 2021 – September 2021</small>
+            </div>
+            <div>
+              <ul class="points">
+                <li>Implemented small features and bug fixes across the web app using semantic <strong>HTML/CSS</strong> and vanilla <strong>JavaScript</strong>.</li>
+                <li>Built and debugged REST API handlers in <strong>Python</strong>; wrote <strong>SQL</strong> queries and simple <strong>migrations</strong>.</li>
+                <li>Added <strong>unit tests</strong> and endpoint-level <strong>integration tests</strong>; created fixtures and data-seeding scripts.</li>
+                <li>Triaged issues using logs and repro steps; verified fixes in <strong>staging</strong> prior to release.</li>
+                <li>Maintained basic <strong>CI</strong> checks (lint/test) and surfaced failures to the team.</li>
+                <li>Used <strong>Git/GitHub</strong> for PRs, reviews, and issue tracking; participated in stand-ups and sprint ceremonies.</li>
+                <li>Wrote lightweight developer docs (local setup, API examples, <strong>Postman</strong> collection).</li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <!-- Folsom Family Tree Counseling -->
-        <div class="tl card">
-          <div>
-            <strong>Website Developer &amp; Digital Strategy — Folsom Family Tree Counseling</strong><br />
-            <small>December 2023 – Present</small>
-          </div>
-          <div>
-            <ul class="points">
-              <li>Recovered the client-owned <strong>domain/DNS</strong> and migrated the site to a modern host.</li>
-              <li>Rebuilt responsive templates; implemented targeted <strong>HTML/CSS</strong> injections and performance fixes.</li>
-              <li>Streamlined messaging: contact-form routing, anti-spam filtering, and a simple spreadsheet process to track inquiries.</li>
-              <li><strong>Wrote all website copy</strong> end-to-end; collaborated on voice/tone and iterated quickly per client feedback.</li>
-              <li>Brand refresh: vector <strong>logo redraw (SVG)</strong>, palette &amp; type scale, favicon and social/OG images.</li>
-              <li>Local SEO: keyword research for the Folsom area, on-page structure, <strong>Google Business Profile</strong>, citations, sitemap/robots.</li>
-              <li>Analytics &amp; monitoring: set up <strong>GA4</strong> and <strong>Search Console</strong>; watched index coverage and search queries.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Teaching Assistant & Grader -->
-        <div class="tl card">
-          <div>
-            <strong>Teaching Assistant &amp; Grader — Database Management, CSU Sacramento</strong><br />
-            <small>January 2024 – May 2024</small>
-          </div>
-          <div>
-            <ul class="points">
-               <li>Supported advanced SQL topics: query optimization, normalization (1NF–3NF), indexing strategies, joins, and ER modeling.</li>
-              <li>Led weekly review sessions and office hours; coached students on schema design and debugging SQL.</li>
-              <li>Developed sample datasets, ERD diagrams, and step-by-step practice problems used in labs and study guides.</li>
-              <li>Assisted with project design and grading; created clear rubrics and delivered actionable feedback with quick turnaround.</li>
-              <li>Maintained course discussion channels (Canvas/Piazza); triaged common issues and posted concise how-to notes.</li>
-              <li>Proctored quizzes/exams and upheld academic-integrity guidelines.</li>
-              <li>Stack: PostgreSQL/MySQL, ERD tools, VS Code/psql; basic shell and Git for starter code and submissions.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Full-Stack Software Engineering Intern -->
-        <div class="tl card">
-          <div>
-            <strong>Full-Stack Software Engineering Intern — Spearwave</strong><br />
-            <small>June 2021 – September 2021</small>
-          </div>
-          <div>
-            <ul class="points">
-              <li>Implemented small features &amp; bug fixes across the web app using semantic HTML/CSS and vanilla JavaScript, working from tickets and code reviews.</li>
-              <li>Built and debugged REST API handlers in <strong>Python</strong>; wrote SQL queries and simple migrations to support new data fields.</li>
-              <li>Added unit tests and endpoint-level integration tests; created fixtures and data-seeding scripts to make tests reliable.</li>
-              <li>Triaged issues using logs and repro steps, wrote minimal repros, and verified fixes in staging prior to release.</li>
-              <li>Maintained basic CI checks (lint/test) to keep the main branch green and surfaced failures to the team.</li>
-              <li>Used Git/GitHub for PRs, reviews, and issue tracking; participated in daily stand-ups, sprint planning, and retrospectives.</li>
-              <li>Wrote lightweight developer docs (local setup, API examples, Postman collection) to improve onboarding and handoffs.</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
     </section>
 
-
-    <!-- SKILLS -->
+    <!-- Skills -->
     <section class="section" id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills</h2>
-      <div class="skills">
-        <span class="chip">Java</span>
-        <span class="chip">Python</span>
-        <span class="chip">TypeScript</span>
-        <span class="chip">C++</span>
-        <span class="chip">Data Structures</span>
-        <span class="chip">Algorithms</span>
-        <span class="chip">OOP</span>
-        <span class="chip">Unit Testing</span>
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
 
-        <span class="chip">Node</span>
-        <span class="chip">Express</span>
-        <span class="chip">REST APIs</span>
-        <span class="chip">SQL</span>
-        <span class="chip">MongoDB</span>
-        <span class="chip">AWS RDS</span>
-        <span class="chip">JWT/Auth</span>
+        <div class="skills-rows">
+          <div class="skill-row">
+            <div class="skill-label">Primary stack</div>
+            <div class="skill-chips">
+              <span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">React</span>
+              <span class="chip">Next.js</span><span class="chip">HTML/CSS</span><span class="chip">Node</span>
+              <span class="chip">Express</span><span class="chip">REST APIs</span>
+            </div>
+            <div class="skill-note">Day-to-day tools for shipping web apps.</div>
+          </div>
 
-        <span class="chip">Git</span>
-        <span class="chip">GitHub Actions</span>
-        <span class="chip">Docker</span>
-        <span class="chip">Linux</span>
+          <div class="skill-row">
+            <div class="skill-label">Languages</div>
+            <div class="skill-chips">
+              <span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Python</span>
+              <span class="chip">Java</span><span class="chip">C++</span>
+            </div>
+            <div class="skill-note">Daily and academic use.</div>
+          </div>
 
-        <span class="chip">React</span>
-        <span class="chip">Next.js</span>
-        <span class="chip">HTML/CSS</span>
+          <div class="skill-row">
+            <div class="skill-label">Data &amp; Storage</div>
+            <div class="skill-chips">
+              <span class="chip">MongoDB</span><span class="chip">SQL</span><span class="chip">AWS RDS</span>
+            </div>
+            <div class="skill-note">Schemas, indexing, migrations.</div>
+          </div>
 
-        <span class="chip">OpenGL/JOGL</span>
-        <span class="chip">GLSL</span>
-        <span class="chip">Maya</span>
-        <span class="chip">Blender</span>
-        <span class="chip">3D Modeling</span>
-        <span class="chip">Animation</span>
-        <span class="chip">CUDA (basics)</span>
-      </div>
-    </section>
+          <div class="skill-row">
+            <div class="skill-label">Auth &amp; Testing</div>
+            <div class="skill-chips">
+              <span class="chip">JWT/Auth</span><span class="chip">Unit Testing</span><span class="chip">Jest</span>
+              <span class="chip">Mocha</span><span class="chip">Selenium WebDriver</span>
+            </div>
+            <div class="skill-note">E2E and unit coverage.</div>
+          </div>
 
-    <!-- EDUCATION -->
-    <section class="section" id="education" aria-labelledby="education-title">
-      <h2 id="education-title">Education</h2>
-      <div class="card pad">
-        <ul class="meta-list">
-          <li><strong>B.S., Computer Science</strong> — California State University, Sacramento</li>
-          <li><strong>A.S., Physical Science &amp; Mathematics</strong> — American River College, Sacramento</li>
-        </ul>
-      </div>
-    </section>
+          <div class="skill-row">
+            <div class="skill-label">DevOps &amp; Tooling</div>
+            <div class="skill-chips">
+              <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span>
+              <span class="chip">Linux</span><span class="chip">Vercel</span><span class="chip">AWS S3</span>
+            </div>
+            <div class="skill-note">CI, deploys, environments.</div>
+          </div>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="contact-card">
-        <div class="card">
-          <h3 class="no-top">Let’s talk</h3>
-          <p>If you are hiring for software engineer roles, I welcome a conversation. Code samples or a brief walkthrough available on request.</p>
-          <div class="row">
-            <a class="btn primary" href="mailto:ammendo28@gmail.com">Email me</a>
-            <a class="btn" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">View resume</a>
+          <div class="skill-row">
+            <div class="skill-label">Graphics &amp; GPU</div>
+            <div class="skill-chips">
+              <span class="chip">OpenGL/JOGL</span><span class="chip">GLSL</span><span class="chip">Maya</span>
+              <span class="chip">Blender</span><span class="chip">3D Modeling</span><span class="chip">Animation</span>
+              <span class="chip">CUDA (basics)</span>
+            </div>
+            <div class="skill-note">Modeling, UVs, lighting, shaders.</div>
           </div>
         </div>
-        <div class="card">
-          <h3 class="no-top">Links</h3>
-          <ul class="links">
-            <li><a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/ammendo28/" target="_blank" rel="noopener">LinkedIn</a></li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <h2 id="education-title">Education</h2>
+
+        <div class="edu">
+          <article class="edu-item card pad">
+            <header class="edu-head">
+              <strong class="edu-degree">B.S., Computer Science</strong>
+              <span class="edu-sep">—</span>
+              <span class="edu-school">California State University, Sacramento</span>
+            </header>
+            <ul class="edu-meta">
+              <li><b>Focus:</b> systems and databases, graphics/OpenGL, web engineering.</li>
+              <li><b>Academic work:</b> JOGL/OpenGL labs and shader studies; data structures and algorithms; database design and indexing.</li>
+              <li><b>Activities:</b> Teaching Assistant / Grader, Database Management (Spring 2024).</li>
+            </ul>
+            <div class="edu-chips">
+              <span class="chip">OpenGL/JOGL</span><span class="chip">GLSL</span><span class="chip">Data Structures</span>
+              <span class="chip">Algorithms</span><span class="chip">Database Design</span><span class="chip">HTML/CSS</span>
+              <span class="chip">TypeScript</span>
+            </div>
+          </article>
+
+          <article class="edu-item card pad">
+            <header class="edu-head">
+              <strong class="edu-degree">A.S., Physical Science &amp; Mathematics</strong>
+              <span class="edu-sep">—</span>
+              <span class="edu-school">American River College, Sacramento</span>
+            </header>
+            <ul class="edu-meta">
+              <li>Foundation in calculus, physics, and discrete mathematics supporting CS coursework.</li>
+            </ul>
+          </article>
+
+          <article class="edu-item card pad">
+            <header class="edu-head">
+              <strong class="edu-degree">Memberships &amp; Affiliations</strong>
+            </header>
+            <div class="edu-chips">
+              <span class="chip"><strong>Society of Hispanic Professional Engineers</strong> (SHPE) — Member, 2023–Present</span>
+              <span class="chip"><strong>Society of Women Engineers</strong> (SWE) — Member, 2023–Present</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-card">
+          <div class="card">
+            <h3 class="no-top">Let’s talk</h3>
+            <p>If you’re hiring for software engineering roles, I welcome a conversation. Code samples or a brief walkthrough available on request.</p>
+            <div class="row">
+              <a class="btn primary" href="mailto:ammendo28@gmail.com">Email me</a>
+              <a class="btn" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">View resume</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="no-top">Links</h3>
+            <ul class="links">
+              <li><a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/ammendo28/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-    <footer class="footer">
-      <div class="container foot">
-        <div class="foot-brand">
-          <a class="brand" href="./index.html">
-            <span class="logo" aria-hidden="true">AM</span>
-            <span class="brand-text">Alexandrea Mendoza</span>
-          </a>
-          <small>© <span id="year"></span> Alexandrea Mendoza — Portfolio</small>
-        </div>
-        <nav class="foot-links" aria-label="Footer navigation">
-          <a href="./index.html#past-projects">Past Projects</a>
-          <a href="./index.html#experience">Experience</a>
-          <a href="./index.html#skills">Skills</a>
-          <a href="./index.html#contact">Contact</a>
-          <a class="btn ghost sm" href="./Alex-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </nav>
-        <div class="foot-social" aria-label="Contact and social">
-          <a href="mailto:alexmendoza99@gmail.com">Email</a>
-          <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/alexandreamendoza" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#top" class="back-to-top">Back to top ↑</a>
-        </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-brand">
+        <a class="brand" href="./index.html">
+          <span class="logo" aria-hidden="true">AM</span>
+          <span class="brand-text">Alexandrea Mendoza</span>
+        </a>
+        <small>© <span id="year"></span> Alexandrea Mendoza — Portfolio</small>
       </div>
-    </footer>
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="./index.html#past-projects">Past Projects</a>
+        <a href="./index.html#experience">Experience</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#contact">Contact</a>
+        <a class="btn ghost sm" href="./Alexandrea-Mendoza-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <div class="foot-social" aria-label="Contact and social">
+        <a href="mailto:ammendo28@gmail.com">Email</a>
+        <a href="https://github.com/alexmendoza99" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/ammendo28/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
