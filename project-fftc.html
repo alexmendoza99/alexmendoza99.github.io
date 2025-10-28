@@ -89,20 +89,40 @@
       </div>
     </section>
 
-    <!-- SCREENS (clickable image -> live site) -->
-    <section class="section" id="screens" aria-labelledby="screens-title">
-      <h2 id="screens-title">Screens</h2>
-      <figure class="shot">
+   <!-- SCREENS -->
+  <section class="section" id="screens" aria-labelledby="screens-title">
+    <h2 id="screens-title">Screens</h2>
+
+    <div class="device-grid">
+      <!-- Desktop -->
+      <figure class="device desktop">
         <a href="https://www.familytreecounseling.net/" target="_blank" rel="noopener"
-           aria-label="Open the Folsom Family Tree Counseling website (new tab)">
-          <img
-            src="assets/fftc-services.png"
-            alt="Folsom Family Tree Counseling home page with modern hero and clear booking CTA"
-            loading="lazy" decoding="async">
+          aria-label="Open Folsom Family Tree Counseling website (desktop)">
+          <span class="screen">
+            <img
+              src="assets/fftc-services.png"
+              alt="FFTC — desktop homepage with hero and clear booking CTA"
+              loading="lazy" decoding="async">
+          </span>
         </a>
-        <figcaption>Home — modern hero and clear booking CTA</figcaption>
+        <figcaption class="device-caption">Desktop — homepage with clear booking CTA</figcaption>
       </figure>
-    </section>
+
+      <!-- Mobile -->
+      <figure class="device phone">
+        <a href="https://www.familytreecounseling.net/" target="_blank" rel="noopener"
+          aria-label="Open Folsom Family Tree Counseling website (mobile)">
+          <span class="screen">
+            <img
+              src="assets/fftc-mobile.jpg"
+              alt="FFTC — mobile homepage with simplified nav and contact-first sections"
+              loading="lazy" decoding="async">
+          </span>
+        </a>
+        <figcaption class="device-caption">Mobile — simplified nav and contact-first layout</figcaption>
+      </figure>
+    </div>
+  </section>
 
     <!-- BRANDING & LOGO WORK -->
     <section class="section" id="branding" aria-labelledby="branding-title">
@@ -281,3 +301,4 @@
   </script>
 </body>
 </html>
+
